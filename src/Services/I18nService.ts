@@ -3,11 +3,17 @@ const EN: Record<TranslationKey, string> = {
   landing_title: 'The Safe Streaming Platform for your child',
   landing_subtitle:
           "Shows handpicked by professional, content for every age bracket and for the family. Totally safe",
+  landing_button: 'Sign here', 
+  landing_offer_title: 'What kid stream have to offer',
+  landing_offer_subtitle: 'We offer shows that are safe for kids of various age groups.',     
   
 };
 const DE: Record<TranslationKey, string> = {
-  landing_title: 'Die sichere Streaming-Plattform für Ihr Kind',
-  landing_subtitle: 'Von Fachleuten handverlesene Sendungen, Inhalte für jede Altersgruppe und für die ganze Familie. Völlig sicher'
+  landing_title: 'Die sichere Streaming Plattform für Ihr Kind',
+  landing_subtitle: 'Von Fachleuten handverlesene Sendungen, Inhalte für jede Altersgruppe und für die ganze Familie. Völlig sicher',
+  landing_button: 'Hier anmelden',
+  landing_offer_title: 'Was kid stream zu bieten hat',
+  landing_offer_subtitle: 'Wir bieten Sendungen, die für Kinder verschiedener Altersgruppen sicher sind.',
   
 };
 const translationsForLocale = (locale: 'en' | 'de') => {
@@ -34,6 +40,9 @@ const tWithParams = (key: TranslationKey, params: Record<string, string> = {}): 
 type TranslationKey =
   | 'landing_title'
   | 'landing_subtitle'
+  | 'landing_button'
+  | 'landing_offer_title'
+  | 'landing_offer_subtitle'
   
 const I18nS = {
   t,
