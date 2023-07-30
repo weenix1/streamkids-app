@@ -1,5 +1,5 @@
 import { Typography } from '@material-tailwind/react';
-import { FunctionComponent, PropsWithChildren } from 'react';
+import React, { FunctionComponent, PropsWithChildren } from 'react';
 
 const Text: FunctionComponent<
   PropsWithChildren<{

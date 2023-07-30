@@ -1,3 +1,4 @@
+import React from 'react'
 import StreamkidsLogo from '../assets/logos/Streamkids-logo4.png'
 
 const Header = () => {

@@ -1,6 +1,7 @@
 import JumboCard from "./JumboCard";
 import Page from "./Page";
 import Title from "./Title";
+import React from "react";
 import Text from "./Text";
 import LayoutPanel from "./LayoutPanel";
 

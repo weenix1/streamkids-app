@@ -1,4 +1,4 @@
-import { PropsWithChildren } from 'react';
+import React, { PropsWithChildren } from 'react';
 
 const Page: React.FC<PropsWithChildren> = ({ children }) => {
   return <div>{children}</div>;
