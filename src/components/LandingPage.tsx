@@ -20,10 +20,6 @@ const LandingPage = () => {
             {t('landing_offer_subtitle')}
           </Text>
         </div>
-        <div>
-
-
-        </div>
 
       </LayoutPanel>
       <LayoutPanel>
