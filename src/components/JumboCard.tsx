@@ -1,10 +1,11 @@
 import React from "react"
 import Header from "./Header"
-import headerPic from '../assets/images/header-bg.png'
 import I18nS from "../Services/I18nService";
 import Title from "./Title";
 import Text from "./Text";
 import CustomButton from "./CustomButton";
+import headerPic from '../assets/images/header-bg.png'
+
 
 
 const JumboCard = () => {
@@ -34,6 +35,7 @@ const JumboCard = () => {
       </div>
 
     </div>
+
   )
 }
 

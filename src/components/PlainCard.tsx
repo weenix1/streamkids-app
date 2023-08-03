@@ -1,30 +1,48 @@
-import React from "react";
-import {
-  Card,
-  CardHeader,
-} from "@material-tailwind/react";
+import React from 'react';
+import Title from './Title';
+import Text from './Text';
+import { Card, CardHeader } from '@material-tailwind/react';
 
-const PlainCard = () => {
+interface Iprops {
+  icon: string;
+  title?: string;
+  description?: string;
+  plain?: boolean;
+}
 
+const PlainCard = ({ icon, title, description, plain }: Iprops) => {
   return (
-    <Card className="max-w-[24rem] overflow-hidden">
+    !plain ? (
+      <div className="h-full p-6 bg-[#F6FAFD] w-full"
+    style={{
+      boxShadow: '14px 13px 0px 0px rgba(217,243,255,1)',
+    }}
+    >
+  <div className="flex justify-start items-center h-full flex-col text-center">
+    <img src={icon} alt="" className='py-5'/>
+    <Title variant="h5">{title}</Title>
+          <Text variant="normal">
+          {description}
+          </Text>
+  </div>
+</div>
+    ):(
+      <Card className="max-w-[32rem] overflow-hidden">
       <CardHeader
         floated={false}
         shadow={false}
         color="transparent"
-        className="m-0 rounded-none"
+        className="m-0 rounded-none max-w-full"
       >
         <img
-          src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80"
-          alt="ui/ux review check"
+          src={icon}
+          alt="review check"
+          className='w-full hover:transform hover:scale-105 transition duration-300 ease-in-out'
         />
       </CardHeader>
     </Card>
+    )
   );
-}
+};
 
 export default PlainCard;
-
-
-
-

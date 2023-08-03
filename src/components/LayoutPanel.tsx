@@ -1,8 +1,13 @@
 import React from 'react';
-import { PropsWithChildren } from 'react';
+// import { PropsWithChildren } from 'react';
 
-const LayoutPanel: React.FC<PropsWithChildren> = ({ children }) => {
-  return <div className="px-28 py-28">{children}</div>;
+interface Iprops {
+  fullWidth?: boolean;
+  children: React.ReactNode;
+}
+
+const LayoutPanel = ({ children,fullWidth }: Iprops) => {
+  return <div className={`${fullWidth? "py-28 bg-[#d9f3ff]": "px-28 py-28"}`}>{children}</div>;
 };
 
 export default LayoutPanel;
