@@ -15,10 +15,7 @@ const Text: FunctionComponent<
   };
   const fontWeight = bold ? 'font-bold' : 'font-normal';
   return (
-    <Typography
-      variant={'paragraph'}
-      className={`${className} ${fontWeight} ${colors[variant]}`}
-    >
+    <Typography variant="paragraph" className={`${className} ${fontWeight} ${colors[variant]}`}>
       {children}
     </Typography>
   );

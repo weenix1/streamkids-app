@@ -1,7 +1,7 @@
-import React from 'react'
-import StreamkidsLogo from '../assets/logos/Streamkids-logo4.png'
+import React from 'react';
+import StreamkidsLogo from '../assets/logos/Streamkids-logo4.png';
 
-const Header = () => {
+function Header() {
   return (
     <header className="bg-transparent">
       <nav className="h-14 flex flex-wrap items-center justify-between mx-auto p-4">
@@ -12,10 +12,7 @@ const Header = () => {
         </div>
       </nav>
     </header>
-
-
-  )
+  );
 }
 
-export default Header
-
+export default Header;

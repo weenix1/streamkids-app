@@ -1,11 +1,9 @@
-import React from 'react'
-import './App.css'
-import LandingPage from './components/LandingPage'
-import Layout from './components/Layout'
+import React from 'react';
+import './App.css';
+import LandingPage from './components/LandingPage';
+import Layout from './components/Layout';
 
 function App() {
-
-
   return (
     <Layout>
       <LandingPage />
@@ -15,7 +13,7 @@ function App() {
         </h1>
       </div> */}
     </Layout>
-  )
+  );
 }
 
-export default App
+export default App;
