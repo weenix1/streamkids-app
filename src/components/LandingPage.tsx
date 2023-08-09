@@ -128,7 +128,7 @@ function LandingPage() {
             {t('payment_plan_subtitle')}
           </Text>
           <div className="flex flex-col md:flex-row justify-between items-center mb-5">
-            <div className="w-75 md:w-50">
+            <div className="text-center w-1/2">
               <Title variant="h4">{t('payment_plan_monthly_title')}</Title>
               <Text variant="title" className="text-xl mb-12">
                 {t('payment_plan_monthly_subtitle')}
@@ -142,7 +142,7 @@ function LandingPage() {
             <div>
               <img src={familyImg} alt="" className="w-full img-fluid" />
             </div>
-            <div className="w-75 md:w-50">
+            <div className="w-1/2 text-center">
               <Title variant="h4">{t('payment_plan_yearly_title')}</Title>
               <Text variant="title" className="text-xl mb-12">
                 {t('payment_plan_yearly_subtitle')}
