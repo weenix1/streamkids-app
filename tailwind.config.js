@@ -1,4 +1,4 @@
-import withMT from '@material-tailwind/react/utils/withMT'
+import withMT from '@material-tailwind/react/utils/withMT';
 
 /** @type {import('tailwindcss').Config} */
 export default withMT({
@@ -12,6 +12,7 @@ export default withMT({
       warning: '#FFBA09',
       disable: '#D8D8D8',
       text_gray: '#212121',
+      bg_color: '#d9f3ff',
     },
     fontFamily: {
       sans: ['Poppins', 'sans-serif'],
@@ -20,4 +21,4 @@ export default withMT({
     extend: {},
   },
   plugins: [],
-})
+});

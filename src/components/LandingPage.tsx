@@ -86,7 +86,7 @@ function LandingPage() {
           </div>
         </div>
       </LayoutPanel>
-      <LayoutPanel fullWidth>
+      <LayoutPanel fullWidth background="bg_color">
         <Title variant="h2" className="text-center mb-8">
           {t('program_list_title')}
         </Title>
@@ -119,7 +119,7 @@ function LandingPage() {
           </div>
         </div>
       </LayoutPanel>
-      <LayoutPanel fullWidth>
+      <LayoutPanel fullWidth background="bg_color">
         <div className="px-28">
           <Title variant="h2" className="text-center mb-4">
             {t('payment_plan_title')}
