@@ -2,8 +2,8 @@ import React from 'react';
 import { Button } from '@material-tailwind/react';
 
 interface CustomButtonProps {
+  color?: 'color_blue' | 'color_yellow';
   children?: React.ReactNode;
-  color?: string;
   width?: string;
   borderColor?: string;
   height?: string;
@@ -15,12 +15,11 @@ interface CustomButtonProps {
 }
 
 function CustomButton({
-  color,
+  color = 'color_yellow',
   width,
   borderColor,
   height,
   onClick,
-  backgroundColor,
   disabled,
   type = 'button',
   dataTestId,
@@ -29,10 +28,9 @@ function CustomButton({
   return (
     <div>
       <Button
-        className={`text-${color || 'white'} bg-${backgroundColor || 'primary'} w-${width || '64'} h-${
-          height || '16'
-        } rounded-lg`}
-        style={{ borderColor: borderColor || color || 'transparent' }}
+        className={`text-${color || 'white'} bg-${color} w-${width || '64'} h-${height || '16'
+          } rounded-lg`}
+        style={{ borderColor: borderColor || 'transparent', backgroundColor: color }}
         onClick={onClick}
         disabled={disabled}
         type={type}

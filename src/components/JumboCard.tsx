@@ -20,7 +20,7 @@ function JumboCard() {
       <Header />
       <div className="flex flex-col justify-items-center items-center pt-36  ">
         <div className="h-44 w-2/6 flex items-center justify-items-center flex-col">
-          <Title variant="h1" color="white">
+          <Title variant="h1" color="whiteTitle">
             {t('landing_title')}
           </Title>
           <Text className="font-normal basic">{t('landing_subtitle')} </Text>

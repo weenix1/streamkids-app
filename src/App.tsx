@@ -1,17 +1,18 @@
-import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import LandingPage from './components/LandingPage';
 import Layout from './components/Layout';
+import GetStarted from './components/GetStarted';
 
 function App() {
   return (
     <Layout>
-      <LandingPage />
-      {/* <div className="min-h-screen flex justify-center items-center">
-        <h1 className="text-3xl font-bold text-blue-600">
-          Install & Setup Vite + React + Typescript + Tailwind CSS 3
-        </h1>
-      </div> */}
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/getstarted" element={<GetStarted />} />
+        </Routes>
+      </BrowserRouter>
     </Layout>
   );
 }

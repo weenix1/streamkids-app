@@ -13,12 +13,18 @@ export default withMT({
       disable: '#D8D8D8',
       text_gray: '#212121',
       bg_color: '#d9f3ff',
+      color_blue: '#3265B5',
+      color_yellow: '#FFEB4F',
     },
     fontFamily: {
       sans: ['Poppins', 'sans-serif'],
       Montserrat: ['Montserrat', 'sans-serif'],
     },
-    extend: {},
+    extend: {
+      backgroundGradient: {
+        blue: 'var(--gradient-blue, linear-gradient(315deg, #00B0FF 0%, #A9E2FC 100%))',
+      },
+    },
   },
   plugins: [],
 });
