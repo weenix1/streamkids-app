@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 interface IllustratedLayoutPanelProps {
   children: React.ReactNode;
@@ -7,14 +7,13 @@ interface IllustratedLayoutPanelProps {
 }
 
 const IllustratedLayoutPanel = ({ children, iconPath }: IllustratedLayoutPanelProps) => {
-
   return (
-    <div className="pt-24 pr-40  pl-1.5" >
+    <div className="pt-24 pr-40  pl-1.5">
       <div className="h-full" style={{ backgroundImage: `url(${iconPath})` }}>
         {children}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default IllustratedLayoutPanel
+export default IllustratedLayoutPanel;

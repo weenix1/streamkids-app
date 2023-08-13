@@ -75,10 +75,10 @@ function LandingPage() {
                 {t('what_we_offer_sign_up_subtitle')}
               </Text>
               <CustomButton
-                // backgroundColor="[#D9F3FF]"
-                color="primary"
-                // className="px-5 rounded border-0 mt-4"
-                // style={{ backgroundColor: "#D9F3FF" }}
+              // backgroundColor="[#D9F3FF]"
+              //color="primary"
+              // className="px-5 rounded border-0 mt-4"
+              // style={{ backgroundColor: "#D9F3FF" }}
               >
                 {t('what_we_offer_sign_up_button')}
               </CustomButton>
