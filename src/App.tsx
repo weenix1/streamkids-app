@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import './App.css';
+import 'tailwindcss/tailwind.css';
 import LandingPage from './components/LandingPage';
 import Layout from './components/Layout';
 import GetStarted from './components/GetStarted';

@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 
-function useNavToGetStarted(): (offerId: string) => void {
+function useNavToGetStarted(): () => void {
   const navigate = useNavigate();
   return () => navigate('/getstarted');
 }

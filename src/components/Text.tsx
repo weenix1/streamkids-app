@@ -1,5 +1,5 @@
 import { Typography } from '@material-tailwind/react';
-import React, { FunctionComponent, PropsWithChildren } from 'react';
+import { FunctionComponent, PropsWithChildren } from 'react';
 
 const Text: FunctionComponent<
   PropsWithChildren<{
@@ -9,9 +9,9 @@ const Text: FunctionComponent<
   }>
 > = ({ children, variant = 'basic', bold = false, className = '' }) => {
   const colors = {
-    basic: 'text-white',
-    title: 'text-black',
-    normal: 'text-text_gray',
+    basic: 'text-stream_white',
+    title: 'text-stream_black',
+    normal: 'text-stream_text_gray',
   };
   const fontWeight = bold ? 'font-bold' : 'font-normal';
   return (

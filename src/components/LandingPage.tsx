@@ -1,4 +1,3 @@
-import React from 'react';
 import JumboCard from './JumboCard';
 import Page from './Page';
 import Title from './Title';

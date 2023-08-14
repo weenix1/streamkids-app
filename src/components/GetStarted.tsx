@@ -7,13 +7,14 @@ import Text from './Text';
 import Title from './Title';
 import CustomButton from './CustomButton';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import RoutingS from '../Services/RoutingS';
 
 const GetStarted = () => {
-  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
+  const navToGetStarted = RoutingS.useNavToGetStarted();
+  const navToOnboarding = RoutingS.useNavToOnBoarding();
   return (
-    <Page bgColor="bg-color_blue">
+    <Page bgColor="color_blue">
       <IllustratedLayoutPanel iconPath={BackgroundFrameIcon}>
         <LayoutPanel>
           <div className="flex justify-center flex-col items-center gap-4 ">
@@ -32,7 +33,7 @@ const GetStarted = () => {
             {isOpen && (
               <div className="flex w-2/4 justify-between items-center">
                 <CustomButton
-                  onClick={() => navigate('/notaparent')}
+                  onClick={navToGetStarted}
                   color="color_yellow"
                   backgroundColor="color_yellow"
                   borderColor="black"
@@ -40,7 +41,7 @@ const GetStarted = () => {
                   <Text variant="basic">I'M A CHILD</Text>
                 </CustomButton>
                 <CustomButton
-                  onClick={() => navigate('/onboarding')}
+                  onClick={navToOnboarding}
                   color="color_yellow"
                   backgroundColor="color_yellow"
                   borderColor="black"
