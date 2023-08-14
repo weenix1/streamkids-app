@@ -1,5 +1,4 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+
 import IllustratedLayoutPanel from './IllustratedLayoutPanel';
 import Page from './Page';
 import CustomButton from './CustomButton';
@@ -7,9 +6,10 @@ import BubbleText from '../assets/icons/bubbleText2.svg';
 import Text from './Text';
 import BackgroundFrameIcon from '../assets/icons/Frame2.svg';
 import SmallPanda from '../assets/icons/smallPanda.svg';
+import RoutingS from '../Services/RoutingS';
 
 const Onboarding2 = () => {
-  const navigate = useNavigate();
+  const { useNavToGetStarted } = RoutingS
   return (
     <Page bgColor="bg-color_blue">
       <IllustratedLayoutPanel iconPath={BackgroundFrameIcon}>
@@ -19,7 +19,7 @@ const Onboarding2 = () => {
             <img src={BubbleText} className="w-96 " alt="text" />
             <div className="flex flex-col items-center justify-center">
               <CustomButton
-                onClick={() => navigate('/getstarted')}
+                onClick={useNavToGetStarted}
                 color="color_yellow"
                 backgroundColor="color_yellow"
                 borderColor="black"
