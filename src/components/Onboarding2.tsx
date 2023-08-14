@@ -9,9 +9,9 @@ import SmallPanda from '../assets/icons/smallPanda.svg';
 import RoutingS from '../Services/RoutingS';
 
 const Onboarding2 = () => {
-  const { useNavToGetStarted } = RoutingS
+  const navToGetStarted = RoutingS.useNavToGetStarted();
   return (
-    <Page bgColor="bg-color_blue">
+    <Page bgColor="color_blue">
       <IllustratedLayoutPanel iconPath={BackgroundFrameIcon}>
         <div className="flex justify-center flex-col items-center px-14 ">
           <img src={SmallPanda} className=" w-[32rem] ms-96" alt="Get Started Panda" />
@@ -19,7 +19,7 @@ const Onboarding2 = () => {
             <img src={BubbleText} className="w-96 " alt="text" />
             <div className="flex flex-col items-center justify-center">
               <CustomButton
-                onClick={useNavToGetStarted}
+                onClick={navToGetStarted}
                 color="color_yellow"
                 backgroundColor="color_yellow"
                 borderColor="black"

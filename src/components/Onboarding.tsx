@@ -8,7 +8,7 @@ import BubbleText from '../assets/icons/bubbleText1.svg';
 import RoutingS from '../Services/RoutingS';
 
 const Onboarding = () => {
-  const { useNavToGetStarted } = RoutingS
+  const navToGetStarted = RoutingS.useNavToGetStarted();
   return (
     <Page bgColor="bg-color_blue">
       <IllustratedLayoutPanel iconPath={BackgroundFrameIcon}>
@@ -17,7 +17,7 @@ const Onboarding = () => {
           <div className=" flex flex-col gap-6 items-center">
             <img src={BubbleText} className="w-96 " alt="text" />
             <CustomButton
-              onClick={useNavToGetStarted}
+              onClick={navToGetStarted}
               color="color_yellow"
               backgroundColor="color_yellow"
               borderColor="black"
