@@ -5,6 +5,7 @@ import Layout from './components/Layout';
 import GetStarted from './components/GetStarted';
 import Onboarding from './components/Onboarding';
 import Onboarding2 from './components/Onboarding2';
+import Registration from './components/Registration';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/getstarted" element={<GetStarted />} />
           <Route path="/notaparent" element={<Onboarding />} />
           <Route path="/onboarding" element={<Onboarding2 />} />
+          <Route path="/registration" element={<Registration />} />
         </Routes>
       </BrowserRouter>
     </Layout>
