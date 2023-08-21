@@ -28,7 +28,7 @@ function CustomButton({
   return (
     <div>
       <Button
-        className={`text-${color || 'white'} bg-${color} w-${width || '64'} h-${height || '16'
+        className={`!text-${color || 'white'} !bg-${color} w-${width || '64'} h-${height || '16'
           } rounded-lg`}
         style={{ borderColor: borderColor || 'transparent', backgroundColor: color }}
         onClick={onClick}
