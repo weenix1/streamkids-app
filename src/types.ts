@@ -23,3 +23,6 @@ export const ConfigColorValues: ConfigColor[] = [
   'bg_color',
   'color_blue',
 ];
+
+export type ConfigPosition = 'start' | 'center' | 'end';
+export type ConfigSize = 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
