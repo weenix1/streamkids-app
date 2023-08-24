@@ -8,7 +8,7 @@ interface IllustratedLayoutPanelProps {
 
 const IllustratedLayoutPanel = ({ children, iconPath }: IllustratedLayoutPanelProps) => {
   return (
-    <div className="pt-24 pr-40  pl-1.5">
+    <div className="pt-24 pr-40  pl-40">
       <div className="h-full" style={{ backgroundImage: `url(${iconPath})` }}>
         {children}
       </div>

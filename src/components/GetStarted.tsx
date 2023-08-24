@@ -14,7 +14,7 @@ const GetStarted = () => {
   const navToGetStarted = RoutingS.useNavToGetStarted();
   const navToOnboarding = RoutingS.useNavToOnBoarding();
   return (
-    <Page bgColor="color_blue">
+    <Page bgColor="dark_gray">
       <IllustratedLayoutPanel iconPath={BackgroundFrameIcon}>
         <LayoutPanel>
           <div className="flex justify-center flex-col items-center gap-4 ">
@@ -23,8 +23,8 @@ const GetStarted = () => {
             {!isOpen && (
               <CustomButton
                 onClick={() => setIsOpen(true)}
-                color="color_yellow"
-                backgroundColor="color_yellow"
+                color="stream_success"
+                bgColor='success'
                 borderColor="black"
               >
                 <Text variant="basic">LET’S GET STARTED</Text>
@@ -34,16 +34,14 @@ const GetStarted = () => {
               <div className="flex w-2/4 justify-between items-center">
                 <CustomButton
                   onClick={navToGetStarted}
-                  color="color_yellow"
-                  backgroundColor="color_yellow"
+                  color="stream_success"
                   borderColor="black"
                 >
                   <Text variant="basic">I'M A CHILD</Text>
                 </CustomButton>
                 <CustomButton
                   onClick={navToOnboarding}
-                  color="color_yellow"
-                  backgroundColor="color_yellow"
+                  color="stream_color_yellow"
                   borderColor="black"
                 >
                   <Text variant="basic">I’M A PARENT</Text>

@@ -1,8 +1,9 @@
-import withMT from '@material-tailwind/react/utils/withMT';
+const withMT = require('@material-tailwind/react/utils/withMT');
+const { join } = require('path');
 
 /** @type {import('tailwindcss').Config} */
 export default withMT({
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  content: [join(__dirname, '{src,pages,components,app}/**/*!(*.stories|*.spec).{ts,tsx,html}')],
   theme: {
     colors: {
       stream_primary: '#00A9F1',
@@ -14,17 +15,14 @@ export default withMT({
       stream_text_gray: '#212121',
       stream_bg_color: '#d9f3ff',
       stream_color_blue: '#3265B5',
-      stream_color_yellow: '#FFEB4F',
+      stream_yellow: '#FFEB4F',
+      stream_dark_gray: '#424242',
     },
     fontFamily: {
       sans: ['Poppins', 'sans-serif'],
       Montserrat: ['Montserrat', 'sans-serif'],
     },
-    extend: {
-      backgroundGradient: {
-        blue: 'var(--gradient-blue, linear-gradient(315deg, #00B0FF 0%, #A9E2FC 100%))',
-      },
-    },
+    extend: {},
   },
   plugins: [],
 });

@@ -23,7 +23,7 @@ function Footer() {
   };
 
   return (
-    <div className="p-5 relative bg-[#424242] text-white">
+    <div className="p-5 relative bg-stream_dark_gray text-white">
       <div
         className="absolute hidden md:flex w-[150px] items-center text-white bottom-5 right-1 gap-4 cursor-pointer"
         onClick={scrollToTop}
