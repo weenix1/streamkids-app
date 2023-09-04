@@ -23,9 +23,8 @@ const GetStarted = () => {
             {!isOpen && (
               <CustomButton
                 onClick={() => setIsOpen(true)}
-                color="stream_success"
-                bgColor='success'
-                borderColor="black"
+                bgColor='warning'
+                borderColor="disabled"
               >
                 <Text variant="basic">LET’S GET STARTED</Text>
               </CustomButton>
@@ -34,15 +33,15 @@ const GetStarted = () => {
               <div className="flex w-2/4 justify-between items-center">
                 <CustomButton
                   onClick={navToGetStarted}
-                  color="stream_success"
-                  borderColor="black"
+                  bgColor='warning'
+                  borderColor="disabled"
                 >
                   <Text variant="basic">I'M A CHILD</Text>
                 </CustomButton>
                 <CustomButton
                   onClick={navToOnboarding}
-                  color="stream_color_yellow"
-                  borderColor="black"
+                  bgColor='warning'
+                  borderColor="disabled"
                 >
                   <Text variant="basic">I’M A PARENT</Text>
                 </CustomButton>

@@ -1,21 +1,22 @@
 import React from 'react';
 import { Button } from '@material-tailwind/react';
+import { ConfigColor } from '../types';
 
 interface CustomButtonProps {
-  color?: 'stream_success' | 'stream_color_yellow';
+  color?: ConfigColor;
   children?: React.ReactNode;
   width?: string;
-  borderColor?: string;
+  borderColor?: ConfigColor;
   height?: string;
   onClick?: () => void;
-  bgColor?: string;
+  bgColor?: ConfigColor;
   disabled?: boolean;
   type?: 'button' | 'submit' | 'reset' | undefined;
   dataTestId?: string;
 }
 
 function CustomButton({
-  bgColor = 'stream_success',
+  bgColor = 'color_blue',
   color,
   width,
   borderColor,
@@ -29,7 +30,7 @@ function CustomButton({
   return (
     <div>
       <Button
-        className={`!text-${color || 'white'} !bg-${bgColor} w-${width || '64'} h-${height || '16'
+        className={`!text-${color || 'white'} bg-${bgColor} w-${width || '64'} h-${height || '16'
           } rounded-lg`}
         style={{ borderColor: borderColor }}
         onClick={onClick}

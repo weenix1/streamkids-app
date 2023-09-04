@@ -21,8 +21,8 @@ const Onboarding2 = () => {
               <CustomButton
                 onClick={navToGetStarted}
                 color="color_yellow"
-                backgroundColor="color_yellow"
-                borderColor="black"
+                bgColor='success'
+                borderColor="dark_gray"
               >
                 <Text variant="basic">SIGN UP</Text>
               </CustomButton>

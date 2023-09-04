@@ -15,7 +15,7 @@ export default withMT({
       stream_text_gray: '#212121',
       stream_bg_color: '#d9f3ff',
       stream_color_blue: '#3265B5',
-      stream_yellow: '#FFEB4F',
+      stream_color_yellow: '#FFEB4F',
       stream_dark_gray: '#424242',
     },
     fontFamily: {
