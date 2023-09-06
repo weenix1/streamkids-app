@@ -1,4 +1,4 @@
-export type ConfigColor =
+/* export type ConfigColor =
   | 'primary'
   | 'secondary'
   | 'success'
@@ -9,11 +9,33 @@ export type ConfigColor =
   | 'bg_color'
   | 'color_blue'
   | 'color_yellow'
-  | 'dark_gray';
+  | 'dark_gray'; */
+
+export type ConfigColor =
+  | 'white'
+  | 'blue-gray'
+  | 'gray'
+  | 'brown'
+  | 'deep-orange'
+  | 'orange'
+  | 'amber'
+  | 'yellow'
+  | 'lime'
+  | 'light-green'
+  | 'green'
+  | 'teal'
+  | 'cyan'
+  | 'light-blue'
+  | 'blue'
+  | 'indigo'
+  | 'deep-purple'
+  | 'purple'
+  | 'pink'
+  | 'red';
 
 // we need to keep this list in sync with the tailwind.config.js, unfortunately ts is not able to have real static types
 // if you change the type of this array, then add the entry in this values array
-export const ConfigColorValues: ConfigColor[] = [
+/* export const ConfigColorValues: ConfigColor[] = [
   'primary',
   'secondary',
   'success',
@@ -23,49 +45,99 @@ export const ConfigColorValues: ConfigColor[] = [
   'text_gray',
   'bg_color',
   'color_blue',
+]; */
+
+export const ConfigColorValues: ConfigColor[] = [
+  'white',
+  'blue-gray',
+  'gray',
+  'brown',
+  'deep-orange',
+  'orange',
+  'amber',
+  'yellow',
+  'lime',
+  'light-green',
+  'green',
+  'teal',
+  'cyan',
+  'light-blue',
+  'blue',
+  'indigo',
+  'deep-purple',
+  'purple',
+  'pink',
+  'red',
 ];
 
 export const ConfigBorderValues: Record<ConfigColor, string> = {
-  primary: 'border-stream_primary',
-  secondary: 'border-stream_secondary',
-  bg_color: 'border-stream_bg_color',
-  success: 'border-stream_success',
   white: 'border-stream_white',
-  warning: 'border-stream_warning',
-  disabled: 'border-stream_disabled',
-  text_gray: 'border-stream_text_gray',
-  color_blue: 'border-stream_color_blue',
-  color_yellow: 'border-stream_color_yellow',
-  dark_gray: 'border-stream_dark_gray',
+  'blue-gray': 'border-stream_blue-gray',
+  gray: 'border-stream_gray',
+  brown: 'border-stream_brown',
+  'deep-orange': 'border-stream_deep-orange',
+  orange: 'border-stream_orange',
+  amber: 'border-stream_amber',
+  yellow: 'border-stream_yellow',
+  lime: 'border-stream_lime',
+  'light-green': 'border-stream_light-green',
+  green: 'border-stream_green',
+  teal: 'border-stream_teal',
+  cyan: 'border-stream_cyan',
+  'light-blue': 'border-stream_secondary',
+  blue: 'border-stream_primary',
+  indigo: 'border-stream_indigo',
+  'deep-purple': 'border-stream_deep-purple',
+  purple: 'border-stream_purple',
+  pink: 'border-stream_pink',
+  red: 'border-stream_red',
 };
 
 export const ConfigTextValues: Record<ConfigColor, string> = {
-  primary: 'text-stream_primary',
-  secondary: 'text-stream_secondary',
-  bg_color: 'text-stream_bg_color',
-  success: 'text-stream_success',
   white: 'text-stream_white',
-  warning: 'text-stream_warning',
-  disabled: 'text-stream_disabled',
-  text_gray: 'text-stream_text_gray',
-  color_blue: 'text-stream_color_blue',
-  color_yellow: 'text-stream_color_yellow',
-  dark_gray: 'text-stream_dark_gray',
+  'blue-gray': 'text-stream_blue-gray',
+  gray: 'text-stream_gray',
+  brown: 'text-stream_brown',
+  'deep-orange': 'text-stream_deep-orange',
+  orange: 'text-stream_orange',
+  amber: 'text-stream_amber',
+  yellow: 'text-stream_yellow',
+  lime: 'text-stream_lime',
+  'light-green': 'text-stream_light-green',
+  green: 'text-stream_green',
+  teal: 'text-stream_teal',
+  cyan: 'text-stream_cyan',
+  'light-blue': 'text-stream_secondary',
+  blue: 'text-stream_primary',
+  indigo: 'text-stream_indigo',
+  'deep-purple': 'text-stream_deep-purple',
+  purple: 'text-stream_purple',
+  pink: 'text-stream_pink',
+  red: 'text-stream_red',
 };
 
 export const ConfigBackGroundValues: Record<ConfigColor, string> = {
-  primary: 'bg-stream_primary',
-  secondary: 'bg-stream_secondary',
-  bg_color: 'bg-stream_bg_color',
-  success: 'bg-stream_success',
   white: 'bg-stream_white',
-  warning: 'bg-stream_warning',
-  disabled: 'bg-stream_disabled',
-  text_gray: 'bg-stream_text_gray',
-  color_blue: 'bg-stream_color_blue',
-  color_yellow: 'bg-stream_color_yellow',
-  dark_gray: 'bg-stream_dark_gray',
+  'blue-gray': 'bg-stream_blue-gray',
+  gray: 'bg-stream_gray',
+  brown: 'bg-stream_brown',
+  'deep-orange': 'bg-stream_deep-orange',
+  orange: 'bg-stream_orange',
+  amber: 'bg-stream_amber',
+  yellow: 'bg-stream_yellow',
+  lime: 'bg-stream_lime',
+  'light-green': 'bg-stream_light-green',
+  green: 'bg-stream_green',
+  teal: 'bg-stream_teal',
+  cyan: 'bg-stream_cyan',
+  'light-blue': 'bg-stream_secondary',
+  blue: 'bg-stream_primary',
+  indigo: 'bg-stream_indigo',
+  'deep-purple': 'bg-stream_deep-purple',
+  purple: 'bg-stream_purple',
+  pink: 'bg-stream_pink',
+  red: 'bg-stream_red',
 };
 
 export type ConfigPosition = 'start' | 'center' | 'end';
-export type ConfigSize = 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
+export type ConfigSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl';

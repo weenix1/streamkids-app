@@ -18,11 +18,9 @@ const Onboarding = () => {
             <img src={BubbleText} className="w-96 " alt="text" />
             <CustomButton
               onClick={navToGetStarted}
-              color="color_yellow"
-              bgColor='success'
-              borderColor="color_blue"
+              color="light-blue"
             >
-              <Text variant="basic">Back</Text>
+              <Text variant='basic'>Back</Text>
             </CustomButton>
           </div>
         </div>

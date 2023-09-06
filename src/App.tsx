@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { ThemeProvider } from '@material-tailwind/react';
 import 'tailwindcss/tailwind.css';
 import LandingPage from './components/LandingPage';
 import Layout from './components/Layout';
@@ -10,19 +9,17 @@ import Registration from './components/Registration';
 
 function App() {
   return (
-    <ThemeProvider>
-      <Layout>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<LandingPage />} />
-            <Route path="/getstarted" element={<GetStarted />} />
-            <Route path="/notaparent" element={<Onboarding />} />
-            <Route path="/onboarding" element={<Onboarding2 />} />
-            <Route path="/registration" element={<Registration />} />
-          </Routes>
-        </BrowserRouter>
-      </Layout>
-    </ThemeProvider>
+    <Layout>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/getstarted" element={<GetStarted />} />
+          <Route path="/notaparent" element={<Onboarding />} />
+          <Route path="/onboarding" element={<Onboarding2 />} />
+          <Route path="/registration" element={<Registration />} />
+        </Routes>
+      </BrowserRouter>
+    </Layout>
   );
 }
 

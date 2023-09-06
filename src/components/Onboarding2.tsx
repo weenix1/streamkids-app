@@ -20,9 +20,7 @@ const Onboarding2 = () => {
             <div className="flex flex-col items-center justify-center">
               <CustomButton
                 onClick={navToGetStarted}
-                color="color_yellow"
-                bgColor='success'
-                borderColor="dark_gray"
+                color="light-blue"
               >
                 <Text variant="basic">SIGN UP</Text>
               </CustomButton>
