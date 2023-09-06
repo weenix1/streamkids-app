@@ -1,5 +1,5 @@
 import React from 'react';
-import { ConfigBackGroundValues, ConfigColor, ConfigSize, ConfigTextValues } from '../types';
+import { ConfigBackGroundValues, ConfigBorderRadius, ConfigBorderValues, ConfigColor, ConfigSize, ConfigTextValues } from '../types';
 
 interface CustomButtonProps {
   color?: ConfigColor;
@@ -14,13 +14,14 @@ interface CustomButtonProps {
   hoverColor?: ConfigColor;
   type?: 'button' | 'submit' | 'reset' | undefined;
   dataTestId?: string;
+  borderR?: ConfigBorderRadius;
 }
 
 function CustomButton({
   color = 'white',
   width = 'xl',
   bgColor = 'blue',
-  borderColor,
+  borderColor = 'blue',
   height = 'xs',
   onClick,
   disabled,
@@ -29,6 +30,7 @@ function CustomButton({
   hover = false,
   hoverColor = 'light-blue',
   children,
+  borderR = 'xl'
 }: CustomButtonProps) {
   const sizeMap: Record<ConfigSize, string> = {
     xs: 'h-16',
@@ -53,7 +55,7 @@ function CustomButton({
     <button onClick={onClick}
       disabled={disabled}
       type={type}
-      data-testid={dataTestId} className={`flex justify-center items-center ${widthMap[width]} ${sizeMap[height]} rounded-xl ${ConfigBackGroundValues[bgColor]} ${borderColor} ${onClick} hover:${ConfigBackGroundValues[hoverColor]} ${hover} ${ConfigTextValues[color]}`}>
+      data-testid={dataTestId} className={`flex justify-center items-center ${widthMap[width]} ${sizeMap[height]} rounded-${borderR} ${ConfigBackGroundValues[bgColor]} ${borderColor} ${onClick} hover:${ConfigBackGroundValues[hoverColor]} ${hover} ${ConfigTextValues[color]} ${ConfigBorderValues[borderColor]}`}>
       {children}
     </button>
   );

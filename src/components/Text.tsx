@@ -1,24 +1,34 @@
 import { Typography } from '@material-tailwind/react';
 import { FunctionComponent, PropsWithChildren } from 'react';
+import { ConfigColor, ConfigSize, ConfigTextValues } from '../types';
+
 
 const Text: FunctionComponent<
   PropsWithChildren<{
-    variant?: 'basic' | 'normal' | 'title';
+    color?: ConfigColor;
     bold?: boolean;
-    className?: string;
+    link?: string;
+    onClick?: () => void;
+    fontSize?: ConfigSize;
   }>
-> = ({ children, variant = 'basic', bold = false, className = '' }) => {
-  const colors = {
-    basic: 'text-stream_white',
-    title: 'text-stream_black',
-    normal: 'text-stream_text_gray',
+> = ({
+  children,
+  color = 'black',
+  bold = false,
+  onClick,
+  fontSize = 'lg',
+}) => {
+    const fontWeight = bold ? 'font-bold' : 'font-normal';
+
+    return (
+      <Typography
+        variant={'paragraph'}
+        className={`${fontWeight} ${ConfigTextValues[color]} text-${fontSize}`}
+        onClick={onClick}
+      >
+        {children}
+      </Typography>
+    );
   };
-  const fontWeight = bold ? 'font-bold' : 'font-normal';
-  return (
-    <Typography variant="paragraph" className={`${className} ${fontWeight} ${colors[variant]}`}>
-      {children}
-    </Typography>
-  );
-};
 
 export default Text;

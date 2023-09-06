@@ -10,7 +10,7 @@ import RoutingS from '../Services/RoutingS';
 const Onboarding = () => {
   const navToGetStarted = RoutingS.useNavToGetStarted();
   return (
-    <Page bgColor="bg-color_blue">
+    <Page bgColor="blue-dark">
       <IllustratedLayoutPanel iconPath={BackgroundFrameIcon}>
         <div className="flex justify-center flex-col items-center px-14 ">
           <img src={SmallPanda} className=" w-[32rem] ms-96" alt="Get Started Panda" />

@@ -13,11 +13,12 @@ interface InputFieldProps {
 }
 
 const configSizeValues: Record<ConfigSize, string> = {
+  xs: 'w-40',
   sm: 'w-60',
   md: 'w-80',
   lg: 'w-760',
   xl: 'w-full',
-  xxl: 'w-screen',
+  '2xl': 'w-screen',
 };
 
 const InputField: React.FC<InputFieldProps> = ({
@@ -49,7 +50,7 @@ const InputField: React.FC<InputFieldProps> = ({
 
   return (
     <div className={`flex flex-col ${widthValue}`}>
-      <Text variant="basic">{label}</Text>
+      <Text color='black'>{label}</Text>
       <div className="relative flex flex-row items-center flex-1">
         <Input
           type="text"

@@ -13,7 +13,7 @@
 
 export type ConfigColor =
   | 'white'
-  | 'blue-gray'
+  | 'blue-dark'
   | 'gray'
   | 'brown'
   | 'deep-orange'
@@ -31,7 +31,8 @@ export type ConfigColor =
   | 'deep-purple'
   | 'purple'
   | 'pink'
-  | 'red';
+  | 'red'
+  | 'black';
 
 // we need to keep this list in sync with the tailwind.config.js, unfortunately ts is not able to have real static types
 // if you change the type of this array, then add the entry in this values array
@@ -49,7 +50,7 @@ export type ConfigColor =
 
 export const ConfigColorValues: ConfigColor[] = [
   'white',
-  'blue-gray',
+  'blue-dark',
   'gray',
   'brown',
   'deep-orange',
@@ -68,17 +69,18 @@ export const ConfigColorValues: ConfigColor[] = [
   'purple',
   'pink',
   'red',
+  'black',
 ];
 
 export const ConfigBorderValues: Record<ConfigColor, string> = {
   white: 'border-stream_white',
-  'blue-gray': 'border-stream_blue-gray',
-  gray: 'border-stream_gray',
+  'blue-dark': 'border-stream_color_blue',
+  gray: 'border-stream_dark_gray',
   brown: 'border-stream_brown',
   'deep-orange': 'border-stream_deep-orange',
   orange: 'border-stream_orange',
   amber: 'border-stream_amber',
-  yellow: 'border-stream_yellow',
+  yellow: 'border-stream_color_yellow',
   lime: 'border-stream_lime',
   'light-green': 'border-stream_light-green',
   green: 'border-stream_green',
@@ -91,17 +93,18 @@ export const ConfigBorderValues: Record<ConfigColor, string> = {
   purple: 'border-stream_purple',
   pink: 'border-stream_pink',
   red: 'border-stream_red',
+  black: 'border-stream_black',
 };
 
 export const ConfigTextValues: Record<ConfigColor, string> = {
   white: 'text-stream_white',
-  'blue-gray': 'text-stream_blue-gray',
-  gray: 'text-stream_gray',
+  'blue-dark': 'text-stream_color_blue',
+  gray: 'text-stream_dark_gray',
   brown: 'text-stream_brown',
   'deep-orange': 'text-stream_deep-orange',
   orange: 'text-stream_orange',
   amber: 'text-stream_amber',
-  yellow: 'text-stream_yellow',
+  yellow: 'text-stream_color_yellow',
   lime: 'text-stream_lime',
   'light-green': 'text-stream_light-green',
   green: 'text-stream_green',
@@ -114,17 +117,18 @@ export const ConfigTextValues: Record<ConfigColor, string> = {
   purple: 'text-stream_purple',
   pink: 'text-stream_pink',
   red: 'text-stream_red',
+  black: 'text-stream_black',
 };
 
 export const ConfigBackGroundValues: Record<ConfigColor, string> = {
   white: 'bg-stream_white',
-  'blue-gray': 'bg-stream_blue-gray',
-  gray: 'bg-stream_gray',
+  'blue-dark': 'bg-stream_color_blue',
+  gray: 'bg-stream_dark_gray',
   brown: 'bg-stream_brown',
   'deep-orange': 'bg-stream_deep-orange',
   orange: 'bg-stream_orange',
   amber: 'bg-stream_amber',
-  yellow: 'bg-stream_yellow',
+  yellow: 'bg-stream_color_yellow',
   lime: 'bg-stream_lime',
   'light-green': 'bg-stream_light-green',
   green: 'bg-stream_green',
@@ -137,7 +141,9 @@ export const ConfigBackGroundValues: Record<ConfigColor, string> = {
   purple: 'bg-stream_purple',
   pink: 'bg-stream_pink',
   red: 'bg-stream_red',
+  black: 'bg-stream_black',
 };
 
 export type ConfigPosition = 'start' | 'center' | 'end';
 export type ConfigSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl';
+export type ConfigBorderRadius = 'none' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | 'full';

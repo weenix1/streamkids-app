@@ -30,7 +30,7 @@ function LandingPage() {
       <LayoutPanel>
         <div className="flex justify-items-center flex-col items-center gap-1 mb-6">
           <Title variant="h3">{t('landing_offer_title')}</Title>
-          <Text variant="normal">{t('landing_offer_subtitle')}</Text>
+          <Text color='gray'>{t('landing_offer_subtitle')}</Text>
         </div>
         <div className="flex flex-wrap -mx-2">
           <div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 px-6">
@@ -70,9 +70,11 @@ function LandingPage() {
               <Title variant="h3" className="m-0">
                 {t('what_we_offer_sign_up_title')}
               </Title>
-              <Text variant="normal" className="mt-4">
-                {t('what_we_offer_sign_up_subtitle')}
-              </Text>
+              <div className="mt-4">
+                <Text color='gray' >
+                  {t('what_we_offer_sign_up_subtitle')}
+                </Text>
+              </div>
               <CustomButton
               // backgroundColor="[#D9F3FF]"
               //color="primary"
@@ -85,7 +87,7 @@ function LandingPage() {
           </div>
         </div>
       </LayoutPanel>
-      <LayoutPanel fullWidth background="bg_color">
+      <LayoutPanel fullWidth bgColor='light-blue'>
         <Title variant="h2" className="text-center mb-8">
           {t('program_list_title')}
         </Title>
