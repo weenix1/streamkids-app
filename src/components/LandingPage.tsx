@@ -93,7 +93,6 @@ const offer: offerType[] = [
   },
 ];
 
-
 function LandingPage() {
   const { t } = I18nS;
 

@@ -28,7 +28,7 @@ function Footer() {
         className="absolute hidden md:flex w-[150px] items-center text-white bottom-5 right-1 gap-4 cursor-pointer"
         onClick={scrollToTop}
       >
-        <Text className="mb-0">Back to top</Text>
+        <Text color='white'>Back to top</Text>
         <span className="border rounded-full p-3">
           <img src={backToTopIcon} alt="Back To Top" />
         </span>
@@ -47,7 +47,7 @@ function Footer() {
             <Title className="pb-3" variant="h4" color="white">
               {t('footer_title')}
             </Title>
-            <Text>{t('footer_subtitle')}</Text>
+            <Text color='white'>{t('footer_subtitle')}</Text>
             <div className="flex gap-9 mt-2">
               <span>
                 <img src={linkedInIcon} alt="LinkedIn Icon" />
