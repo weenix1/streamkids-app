@@ -3,7 +3,7 @@ import Page from './Page';
 import Title from './Title';
 import Text from './Text';
 import LayoutPanel from './LayoutPanel';
-import I18nS from '../Services/I18nService';
+import I18nS, { TranslationKey } from '../Services/I18nService';
 import curatedContentIcon from '../assets/icons/curated-content.svg';
 import parentalControlIcon from '../assets/icons/parental-control.svg';
 import easyToUseIcon from '../assets/icons/easy-to-use.svg';
@@ -23,73 +23,107 @@ import familyImg from '../assets/icons/family.svg';
 import Footer from './Footer';
 import Box from './Box';
 
+
+const curatedIcons: Record<string, string> = {
+  'curated-content': curatedContentIcon,
+  'parental-control': parentalControlIcon,
+  'easy-to-use': easyToUseIcon,
+};
+type sliderType = {
+  icon: string;
+}
+
+const SliderIcons: sliderType[] = [
+  {
+    icon: 'sliderImg1',
+  },
+  {
+    icon: 'sliderImg2',
+  },
+  {
+    icon: 'sliderImg3',
+  },
+  {
+    icon: 'sliderImg4',
+  },
+];
+
+const sliderIcons: Record<string, string> = {
+  'sliderImg1': sliderImg1,
+  'sliderImg2': sliderImg2,
+  'sliderImg3': sliderImg3,
+  'sliderImg4': sliderImg4,
+};
+
+type offerType = {
+  title: TranslationKey;
+  subtitle: TranslationKey;
+  icon: string;
+};
+
+const offer: offerType[] = [
+  {
+    title: 'what_we_offer_card1_title',
+    subtitle: 'what_we_offer_card1_subtitle',
+    icon: 'curated-content',
+  },
+  {
+    title: 'what_we_offer_card2_title',
+    subtitle: 'what_we_offer_card2_subtitle',
+    icon: 'parental-control',
+  },
+  {
+    title: 'what_we_offer_card3_title',
+    subtitle: 'what_we_offer_card3_subtitle',
+    icon: 'easy-to-use',
+  },
+];
+
+
 function LandingPage() {
   const { t } = I18nS;
+
   return (
     <Page>
       <JumboCard />
       <LayoutPanel>
-        <Box flexJustifyContent='center' flexAlignItems='center' flexDirection='column' className='gap-1 mb-6'>
+        <Box flexJustifyContent='center' flexAlignItems='center' flexDirection='column' className='gap-6 pb-20'>
           <Title variant="h3">{t('landing_offer_title')}</Title>
           <Text color='gray'>{t('landing_offer_subtitle')}</Text>
         </Box>
-        {/*  <div className="flex justify-items-center flex-col items-center gap-1 mb-6">
-          <Title variant="h3">{t('landing_offer_title')}</Title>
-          <Text color='gray'>{t('landing_offer_subtitle')}</Text>
-        </div> */}
-        <Box flexJustifyContent='center' flexWrap='nowrap' className="-mx-2">
-          <div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 px-6">
-            <Box className="h-full">
-              <PlainCard
-                icon={curatedContentIcon}
-                title={t('what_we_offer_card1_title')}
-                description={t('what_we_offer_card1_subtitle')}
-              />
+        <Box flexJustifyContent='center' flexWrap='wrap' className="-mx-2 ">
+          {offer.map((item) => (
+            <Box key={item.title} className="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 px-6 mx-auto">
+              <Box className="h-full">
+                <PlainCard
+                  icon={curatedIcons[item.icon]}
+                  title={t(item.title)}
+                  description={t(item.subtitle)}
+                />
+              </Box>
             </Box>
-          </div>
-          <div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 px-6 mt-5 sm:mt-0">
-            <Box className="h-full">
-              <PlainCard
-                icon={parentalControlIcon}
-                title={t('what_we_offer_card2_title')}
-                description={t('what_we_offer_card2_subtitle')}
-              />
-            </Box>
-          </div>
-          <div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 px-6 mt-5 lg:mt-0 md:mr-auto">
-            <Box className="h-full">
-              <PlainCard
-                icon={easyToUseIcon}
-                title={t('what_we_offer_card3_title')}
-                description={t('what_we_offer_card3_subtitle')}
-              />
-            </Box>
-          </div>
+          ))}
         </Box>
-        <Box flexAlignItems='center' flexJustifyContent='around' className="my-32">
-          <div className="w-full sm:w-1/2">
+        <Box flexDirection='column' flexAlignItems='center' flexJustifyContent='around' className="my-32 sm:flex-col md:flex-row">
+          <Box className='w-2/3'>
             <img className="max-w-full" src={groupIcon} alt="" />
-          </div>
-          <div className="w-full sm:w-4/12">
-            <Box flexDirection='column' flexAlignItems='start' textAlign='left'>
-              <Title variant="h3" className="m-0">
-                {t('what_we_offer_sign_up_title')}
-              </Title>
-              <div className="mt-4">
-                <Text color='gray' >
-                  {t('what_we_offer_sign_up_subtitle')}
-                </Text>
-              </div>
-              <CustomButton
-              // backgroundColor="[#D9F3FF]"
-              //color="primary"
-              // className="px-5 rounded border-0 mt-4"
-              // style={{ backgroundColor: "#D9F3FF" }}
-              >
-                {t('what_we_offer_sign_up_button')}
-              </CustomButton>
+          </Box>
+          <Box flexDirection='column' flexAlignItems='start' textAlign='left' className='w-2/3 gap-6'>
+            <Title variant="h3" className="m-0">
+              {t('what_we_offer_sign_up_title')}
+            </Title>
+            <Box className="mt-4">
+              <Text color='gray' >
+                {t('what_we_offer_sign_up_subtitle')}
+              </Text>
             </Box>
-          </div>
+            <CustomButton
+              bgColor='blue'
+            >
+              {t('what_we_offer_sign_up_button')}
+            </CustomButton>
+          </Box>
+
         </Box>
       </LayoutPanel>
       <LayoutPanel fullWidth bgColor='light-blue'>
@@ -97,16 +131,14 @@ function LandingPage() {
           {t('program_list_title')}
         </Title>
         <Box flexGrow='grow' className="gap-4 -ml-24 mb-12">
-          <PlainCard icon={sliderImg1} plain />
-          <PlainCard icon={sliderImg2} plain />
-          <PlainCard icon={sliderImg3} plain />
-          <PlainCard icon={sliderImg4} plain />
+          {SliderIcons.map((item) => (
+            <PlainCard key={item.icon} icon={`${sliderIcons[item.icon]}`} plain />
+          ))}
         </Box>
         <Box flexGrow='grow' className="gap-4 -mr-24">
-          <PlainCard icon={sliderImg4} plain />
-          <PlainCard icon={sliderImg2} plain />
-          <PlainCard icon={sliderImg3} plain />
-          <PlainCard icon={sliderImg1} plain />
+          {SliderIcons.map((item) => (
+            <PlainCard key={item.icon} icon={`${sliderIcons[item.icon]}`} plain />
+          )).reverse()}
         </Box>
       </LayoutPanel>
       <LayoutPanel>

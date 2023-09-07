@@ -110,7 +110,7 @@ const tWithParams = (key: TranslationKey, params: Record<string, string> = {}): 
     ? Object.keys(params).reduce((result, attr) => result.replace(`{${attr}}`, params[attr]), template)
     : '';
 };
-type TranslationKey =
+export type TranslationKey =
   | 'landing_title'
   | 'landing_subtitle'
   | 'landing_button'
