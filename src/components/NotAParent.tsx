@@ -21,7 +21,7 @@ const NotAParent = () => {
               color="black"
               bgColor='yellow'
             >
-              <Text color='black'>Back</Text>
+              <Text color='black' bold>Back</Text>
             </CustomButton>
           </div>
         </div>

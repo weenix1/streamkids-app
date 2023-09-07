@@ -21,15 +21,18 @@ const GetStarted = () => {
         <LayoutPanel>
           <Box flexJustifyContent='center' flexDirection='column' flexAlignItems='center' className="gap-24">
             <img src={panda} className="w-96" alt="Get Started Panda" />
-            <Title color="blue">WELCOME TO KIDS STREAM</Title>
+
             {!isOpen && (
-              <CustomButton
-                onClick={() => setIsOpen(true)}
-                bgColor='yellow'
-                borderColor='gray'
-              >
-                <Text color='black' bold fontFamily='Montserrat'>LET’S GET STARTED</Text>
-              </CustomButton>
+              <>
+                <Title color="blue">WELCOME TO KIDS STREAM</Title>
+                <CustomButton
+                  onClick={() => setIsOpen(true)}
+                  bgColor='yellow'
+                  borderColor='gray'
+                >
+                  <Text color='black' bold fontFamily='Montserrat'>LET’S GET STARTED</Text>
+                </CustomButton>
+              </>
             )}
             {isOpen && (
               <Box flexJustifyContent='between' flexAlignItems='center' className="gap-72">
@@ -38,14 +41,14 @@ const GetStarted = () => {
                   bgColor='yellow'
                   borderColor='gray'
                 >
-                  <Text color='black'>I'M A CHILD</Text>
+                  <Text color='black' bold>I'M A CHILD</Text>
                 </CustomButton>
                 <CustomButton
                   onClick={navToParent}
                   bgColor='yellow'
                   borderColor='gray'
                 >
-                  <Text color='black'>I’M A PARENT</Text>
+                  <Text color='black' bold>I’M A PARENT</Text>
                 </CustomButton>
               </Box>
             )}

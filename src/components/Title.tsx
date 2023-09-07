@@ -4,7 +4,7 @@ import { ConfigColor, ConfigTextValues } from '../types';
 
 const Title: FunctionComponent<
   PropsWithChildren<{ variant?: 'h1' | 'h2' | 'h3' | 'h4' | "h5" | "h6", color?: ConfigColor, className?: string }>
-> = ({ variant = 'h1', children, color = 'light-blue', className }) => {
+> = ({ variant = 'h1', children, color = 'black', className }) => {
 
   return (
     <Typography variant={variant} className={`font-bold ${ConfigTextValues[color]} ${className}`}>

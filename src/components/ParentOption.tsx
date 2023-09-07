@@ -23,7 +23,7 @@ const ParentOption = () => {
                 color="light-blue"
                 bgColor='yellow'
               >
-                <Text color='black'>SIGN UP</Text>
+                <Text color='black' bold>SIGN UP</Text>
               </CustomButton>
               <Text color='white'>
                 Already have an account?{' '}
