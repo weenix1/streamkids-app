@@ -7,7 +7,7 @@ import Text from './Text';
 import BubbleText from '../assets/icons/bubbleText1.svg';
 import RoutingS from '../Services/RoutingS';
 
-const Onboarding = () => {
+const NotAParent = () => {
   const navToGetStarted = RoutingS.useNavToGetStarted();
   return (
     <Page bgColor="blue-dark">
@@ -18,9 +18,10 @@ const Onboarding = () => {
             <img src={BubbleText} className="w-96 " alt="text" />
             <CustomButton
               onClick={navToGetStarted}
-              color="light-blue"
+              color="black"
+              bgColor='yellow'
             >
-              <Text variant='basic'>Back</Text>
+              <Text color='black'>Back</Text>
             </CustomButton>
           </div>
         </div>
@@ -29,4 +30,4 @@ const Onboarding = () => {
   );
 };
 
-export default Onboarding;
+export default NotAParent;

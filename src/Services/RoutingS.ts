@@ -5,20 +5,26 @@ function useNavToGetStarted(): () => void {
   return () => navigate('/getstarted');
 }
 
+function goBack(): () => void {
+  const navigate = useNavigate();
+  return () => navigate(-1);
+}
+
 function useNavToNotAParent(): () => void {
   const navigate = useNavigate();
   return () => navigate('/notaparent');
 }
 
-function useNavToOnBoarding(): () => void {
+function useNavToParent(): () => void {
   const navigate = useNavigate();
-  return () => navigate('/onboarding');
+  return () => navigate('/parent');
 }
 
 const RoutingS = {
   useNavToGetStarted,
   useNavToNotAParent,
-  useNavToOnBoarding,
+  useNavToParent,
+  goBack,
 };
 
 export default RoutingS;

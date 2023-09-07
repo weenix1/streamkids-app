@@ -8,11 +8,13 @@ import Title from './Title';
 import CustomButton from './CustomButton';
 import { useState } from 'react';
 import RoutingS from '../Services/RoutingS';
+import Box from './Box';
 
 const GetStarted = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const navToGetStarted = RoutingS.useNavToGetStarted();
-  const navToOnboarding = RoutingS.useNavToOnBoarding();
+
+  const navToParent = RoutingS.useNavToParent();
+  const navToNotAparent = RoutingS.useNavToNotAParent();
   return (
     <Page bgColor="blue-dark">
       <IllustratedLayoutPanel iconPath={BackgroundFrameIcon}>
@@ -30,22 +32,22 @@ const GetStarted = () => {
               </CustomButton>
             )}
             {isOpen && (
-              <div className="flex w-2/4 justify-between items-center">
+              <Box flexJustifyContent='between' flexAlignItems='center' className="gap-72">
                 <CustomButton
-                  onClick={navToGetStarted}
+                  onClick={navToNotAparent}
                   bgColor='yellow'
                   borderColor='gray'
                 >
                   <Text color='black'>I'M A CHILD</Text>
                 </CustomButton>
                 <CustomButton
-                  onClick={navToOnboarding}
+                  onClick={navToParent}
                   bgColor='yellow'
                   borderColor='gray'
                 >
                   <Text color='black'>I’M A PARENT</Text>
                 </CustomButton>
-              </div>
+              </Box>
             )}
           </div>
         </LayoutPanel>

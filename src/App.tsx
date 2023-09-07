@@ -3,8 +3,8 @@ import 'tailwindcss/tailwind.css';
 import LandingPage from './components/LandingPage';
 import Layout from './components/Layout';
 import GetStarted from './components/GetStarted';
-import Onboarding from './components/Onboarding';
-import Onboarding2 from './components/Onboarding2';
+import NotAParent from './components/NotAParent';
+import ParentOption from './components/ParentOption';
 import Registration from './components/Registration';
 
 function App() {
@@ -14,8 +14,8 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/getstarted" element={<GetStarted />} />
-          <Route path="/notaparent" element={<Onboarding />} />
-          <Route path="/onboarding" element={<Onboarding2 />} />
+          <Route path="/notaparent" element={<NotAParent />} />
+          <Route path="/parent" element={<ParentOption />} />
           <Route path="/registration" element={<Registration />} />
         </Routes>
       </BrowserRouter>

@@ -8,7 +8,7 @@ import BackgroundFrameIcon from '../assets/icons/Frame2.svg';
 import SmallPanda from '../assets/icons/smallPanda.svg';
 import RoutingS from '../Services/RoutingS';
 
-const Onboarding2 = () => {
+const ParentOption = () => {
   const navToGetStarted = RoutingS.useNavToGetStarted();
   return (
     <Page bgColor="blue-dark">
@@ -21,10 +21,11 @@ const Onboarding2 = () => {
               <CustomButton
                 onClick={navToGetStarted}
                 color="light-blue"
+                bgColor='yellow'
               >
-                <Text variant="basic">SIGN UP</Text>
+                <Text color='black'>SIGN UP</Text>
               </CustomButton>
-              <Text variant="basic">
+              <Text color='white'>
                 Already have an account?{' '}
                 <a
                   className="
@@ -42,4 +43,4 @@ const Onboarding2 = () => {
     </Page>
   );
 };
-export default Onboarding2;
+export default ParentOption;
