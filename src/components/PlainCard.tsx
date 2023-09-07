@@ -21,7 +21,7 @@ function PlainCard({ icon, title, description, plain }: Iprops) {
       <div className="flex justify-start items-center h-full flex-col text-center">
         <img src={icon} alt="" className="py-5" />
         <Title variant="h5">{title}</Title>
-        <Text variant="normal">{description}</Text>
+        <Text color='white'>{description}</Text>
       </div>
     </div>
   ) : (

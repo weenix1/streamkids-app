@@ -19,16 +19,16 @@ const GetStarted = () => {
     <Page bgColor="blue-dark">
       <IllustratedLayoutPanel iconPath={BackgroundFrameIcon}>
         <LayoutPanel>
-          <div className="flex justify-center flex-col items-center gap-4 ">
+          <Box flexJustifyContent='center' flexDirection='column' flexAlignItems='center' className="gap-24">
             <img src={panda} className="w-96" alt="Get Started Panda" />
-            <Title color="white">WELCOME TO KIDS STREAM</Title>
+            <Title color="blue">WELCOME TO KIDS STREAM</Title>
             {!isOpen && (
               <CustomButton
                 onClick={() => setIsOpen(true)}
                 bgColor='yellow'
                 borderColor='gray'
               >
-                <Text color='black'>LET’S GET STARTED</Text>
+                <Text color='black' bold fontFamily='Montserrat'>LET’S GET STARTED</Text>
               </CustomButton>
             )}
             {isOpen && (
@@ -49,7 +49,7 @@ const GetStarted = () => {
                 </CustomButton>
               </Box>
             )}
-          </div>
+          </Box>
         </LayoutPanel>
       </IllustratedLayoutPanel>
     </Page>

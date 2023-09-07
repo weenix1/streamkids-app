@@ -21,7 +21,7 @@ export default withMT({
     },
     fontFamily: {
       sans: ['Poppins', 'sans-serif'],
-      Montserrat: ['Montserrat', 'sans-serif'],
+      Montserrat: ['Montserrat Alternates', 'sans-serif'],
     },
     extend: {},
   },

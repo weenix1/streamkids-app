@@ -3,6 +3,7 @@ import { FunctionComponent, PropsWithChildren } from 'react';
 import { ConfigColor, ConfigSize, ConfigTextValues } from '../types';
 
 
+
 const Text: FunctionComponent<
   PropsWithChildren<{
     color?: ConfigColor;
@@ -10,6 +11,7 @@ const Text: FunctionComponent<
     link?: string;
     onClick?: () => void;
     fontSize?: ConfigSize;
+    fontFamily?: 'sans' | 'Montserrat';
   }>
 > = ({
   children,
@@ -17,13 +19,14 @@ const Text: FunctionComponent<
   bold = false,
   onClick,
   fontSize = 'lg',
+  fontFamily = 'sans',
 }) => {
     const fontWeight = bold ? 'font-bold' : 'font-normal';
 
     return (
       <Typography
         variant={'paragraph'}
-        className={`${fontWeight} ${ConfigTextValues[color]} text-${fontSize}`}
+        className={`${fontWeight} ${ConfigTextValues[color]} text-${fontSize} font-${fontFamily}`}
         onClick={onClick}
       >
         {children}
