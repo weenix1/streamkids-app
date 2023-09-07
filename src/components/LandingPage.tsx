@@ -48,6 +48,20 @@ const SliderIcons: sliderType[] = [
   },
 ];
 
+const platformIcons: Record<string, string> = {
+  'laptop': laptopIcon,
+  'smartTv': smartTvIcon,
+  'tablet': tabletIcon,
+  'phone': phoneIcon,
+};
+
+const platformIconsArray: string[] = [
+  'laptop',
+  'smartTv',
+  'tablet',
+  'phone',
+];
+
 const sliderIcons: Record<string, string> = {
   'sliderImg1': sliderImg1,
   'sliderImg2': sliderImg2,
@@ -132,12 +146,12 @@ function LandingPage() {
         </Title>
         <Box flexGrow='grow' className="gap-4 -ml-24 mb-12">
           {SliderIcons.map((item) => (
-            <PlainCard key={item.icon} icon={`${sliderIcons[item.icon]}`} plain />
+            <PlainCard key={item.icon} icon={sliderIcons[item.icon]} plain />
           ))}
         </Box>
         <Box flexGrow='grow' className="gap-4 -mr-24">
           {SliderIcons.map((item) => (
-            <PlainCard key={item.icon} icon={`${sliderIcons[item.icon]}`} plain />
+            <PlainCard key={item.icon} icon={sliderIcons[item.icon]} plain />
           )).reverse()}
         </Box>
       </LayoutPanel>
@@ -151,10 +165,11 @@ function LandingPage() {
           </Text>
         </Box>
         <Box flexAlignItems='center' flexWrap='wrap' flexJustifyContent='between'>
-          <img src={laptopIcon} alt="" />
-          <img src={smartTvIcon} alt="" />
-          <img src={tabletIcon} alt="" />
-          <img src={phoneIcon} alt="" />
+          {platformIconsArray.map((item) => (
+            <Box key={item} className="w-1/2 md:w-1/4 lg:w-1/6">
+              <img src={platformIcons[item]} alt="" className="w-full img-fluid" />
+            </Box>
+          ))}
         </Box>
       </LayoutPanel>
       <LayoutPanel fullWidth bgColor='light-blue'>
