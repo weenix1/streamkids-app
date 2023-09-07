@@ -5,6 +5,7 @@ import Text from './Text';
 import CustomButton from './CustomButton';
 import headerPic from '../assets/images/header-bg.png';
 import RoutingS from '../Services/RoutingS';
+import Box from './Box';
 
 function JumboCard() {
   const { t } = I18nS;
@@ -19,22 +20,22 @@ function JumboCard() {
       }}
     >
       <Header />
-      <div className="flex flex-col justify-items-center items-center pt-36  ">
-        <div className="h-44 w-2/6 flex items-center justify-items-center flex-col">
+      <Box flexDirection='column' flexJustifyContent='center' flexAlignItems='center' className="pt-36">
+        <Box flexAlignItems='center' flexJustifyContent='center' flexDirection='column' className="h-44 w-2/6">
           <Title
             variant="h1"
-          //color="whiteTitle"
+            color='white'
           >
             {t('landing_title')}
           </Title>
-          <Text bold>{t('landing_subtitle')} </Text>
+          <Text color='white' bold>{t('landing_subtitle')} </Text>
           <div className="pt-4 md:pt-14">
             <CustomButton bgColor='blue' color='white' height='xs' width='xl' onClick={navToGetStarted} dataTestId="custom-button-test">
               {t('landing_button')}
             </CustomButton>
           </div>
-        </div>
-      </div>
+        </Box>
+      </Box>
     </div>
   );
 }

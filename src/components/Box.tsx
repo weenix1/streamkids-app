@@ -11,6 +11,8 @@ type FlexJustifyContent =
   | 'evenly';
 type FlexAlignItems = 'start' | 'end' | 'center' | 'stretch' | 'baseline';
 type FlexWrap = 'nowrap' | 'wrap' | 'wrap-reverse';
+type TextAlign = 'left' | 'center' | 'right' | 'justify' | 'start' | 'end';
+type FlexGrow = 'grow' | 'grow-0';
 
 interface BoxProps extends HTMLProps<HTMLDivElement> {
   children: ReactNode;
@@ -18,6 +20,8 @@ interface BoxProps extends HTMLProps<HTMLDivElement> {
   flexJustifyContent?: FlexJustifyContent;
   flexAlignItems?: FlexAlignItems;
   flexWrap?: FlexWrap;
+  textAlign?: TextAlign;
+  flexGrow?: FlexGrow;
 }
 
 const Box: FC<BoxProps> = ({
@@ -25,7 +29,9 @@ const Box: FC<BoxProps> = ({
   flexDirection = 'row',
   flexJustifyContent,
   flexAlignItems,
+  textAlign,
   flexWrap,
+  flexGrow,
   className,
   ...rest
 }) => {
@@ -56,6 +62,18 @@ const Box: FC<BoxProps> = ({
       'flex-nowrap': flexWrap === 'nowrap',
       'flex-wrap': flexWrap === 'wrap',
       'flex-wrap-reverse': flexWrap === 'wrap-reverse',
+    },
+    {
+      'text-left': textAlign === 'left',
+      'text-center': textAlign === 'center',
+      'text-right': textAlign === 'right',
+      'text-justify': textAlign === 'justify',
+      'text-start': textAlign === 'start',
+      'text-end': textAlign === 'end',
+    },
+    {
+      'flex-grow': flexGrow === 'grow',
+      'flex-grow-0': flexGrow === 'grow-0',
     },
     className
   );
