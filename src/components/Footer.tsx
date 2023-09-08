@@ -6,9 +6,9 @@ import emailIcon from '../assets/icons/emailIcon.svg';
 import smallPhoneIcon from '../assets/icons/smallPhoneIcon.svg';
 import backToTopIcon from '../assets/icons/backToTopIcon.svg';
 import I18nS from '../Services/I18nService';
-import LayoutPanel from './LayoutPanel';
-import Title from './Title';
-import Text from './Text';
+import LayoutPanel from './BaseUi/LayoutPanel';
+import Title from './BaseUi/Title';
+import Text from './BaseUi/Text';
 
 function Footer() {
   const { t } = I18nS;

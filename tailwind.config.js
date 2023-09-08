@@ -18,6 +18,7 @@ export default withMT({
       stream_color_yellow: '#FFEB4F',
       stream_dark_gray: '#424242',
       stream_black: '#000000',
+      stream_transparent: 'transparent',
     },
     fontFamily: {
       sans: ['Poppins', 'sans-serif'],

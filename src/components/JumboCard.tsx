@@ -1,11 +1,11 @@
 import Header from './Header';
 import I18nS from '../Services/I18nService';
-import Title from './Title';
-import Text from './Text';
-import CustomButton from './CustomButton';
+import Title from './BaseUi/Title';
+import Text from './BaseUi/Text';
+import CustomButton from './BaseUi/CustomButton';
 import headerPic from '../assets/images/header-bg.png';
 import RoutingS from '../Services/RoutingS';
-import Box from './Box';
+import Box from './BaseUi/Box';
 
 function JumboCard() {
   const { t } = I18nS;

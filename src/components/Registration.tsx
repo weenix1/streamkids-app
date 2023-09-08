@@ -1,18 +1,21 @@
-import DoubleViewPanel from "./DoubleViewPanel";
+import DoubleViewPanel from "./BaseUi/DoubleViewPanel";
+import SignUpIcon from '../assets/icons/signup.svg'
+import Box from "./BaseUi/Box";
+import Text from "./BaseUi/Text";
 
 
 const Registration = () => {
   return (
     <DoubleViewPanel leftContent={
-      <div className="flex flex-col items-center justify-center h-full">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR11dbvjijhPrRPlnz-gmIREmQi67ShE2lD7_KcjB-IrQ&s" alt="registration" className="w-1/2" />
-        <p className="text-xl">Register to create your account</p>
-      </div>
+      <Box flexDirection="column" flexAlignItems="center" flexJustifyContent="center" className="h-full gap-20">
+        <img src={SignUpIcon} alt="Get Started Panda" />
+        <Text color="white">The fun way to engage your child while learning</Text>
+      </Box>
     } rightContent={
-      <div className="flex flex-col items-center justify-center h-full">
+      <Box flexDirection="column" flexAlignItems="center" flexJustifyContent="center" className="h-full gap-20">
         <h1 className="text-4xl font-bold">Registration</h1>
         <p className="text-xl">Register to create your account</p>
-      </div>
+      </Box>
 
     } />
   )

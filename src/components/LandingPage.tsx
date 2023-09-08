@@ -1,15 +1,15 @@
 import JumboCard from './JumboCard';
 import Page from './Page';
-import Title from './Title';
-import Text from './Text';
-import LayoutPanel from './LayoutPanel';
+import Title from './BaseUi/Title';
+import Text from './BaseUi/Text';
+import LayoutPanel from './BaseUi/LayoutPanel';
 import I18nS, { TranslationKey } from '../Services/I18nService';
 import curatedContentIcon from '../assets/icons/curated-content.svg';
 import parentalControlIcon from '../assets/icons/parental-control.svg';
 import easyToUseIcon from '../assets/icons/easy-to-use.svg';
-import PlainCard from './PlainCard';
+import PlainCard from './BaseUi/PlainCard';
 import groupIcon from '../assets/icons/perfectPlaceGroupIcon.svg';
-import CustomButton from './CustomButton';
+import CustomButton from './BaseUi/CustomButton';
 import sliderImg1 from '../assets/icons/sliderImg1.svg';
 import sliderImg2 from '../assets/icons/sliderImg2.svg';
 import sliderImg3 from '../assets/icons/sliderImg3.svg';
@@ -21,7 +21,7 @@ import phoneIcon from '../assets/icons/phone.svg';
 import monthlysec from '../assets/icons/monthlysec.svg';
 import familyImg from '../assets/icons/family.svg';
 import Footer from './Footer';
-import Box from './Box';
+import Box from './BaseUi/Box';
 
 
 const curatedIcons: Record<string, string> = {

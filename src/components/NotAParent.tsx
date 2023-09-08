@@ -1,20 +1,21 @@
-import BackgroundFrameIcon from '../assets/icons/Frame2.svg';
-import CustomButton from './CustomButton';
+import BackgroundFrameIcon from '../assets/icons/Frame.svg';
+import CustomButton from './BaseUi/CustomButton';
 import SmallPanda from '../assets/icons/smallPanda.svg';
 import Page from './Page';
-import IllustratedLayoutPanel from './IllustratedLayoutPanel';
-import Text from './Text';
+import IllustratedLayoutPanel from './BaseUi/IllustratedLayoutPanel';
+import Text from './BaseUi/Text';
 import BubbleText from '../assets/icons/bubbleText1.svg';
 import RoutingS from '../Services/RoutingS';
+import Box from './BaseUi/Box';
 
 const NotAParent = () => {
   const navToGetStarted = RoutingS.useNavToGetStarted();
   return (
     <Page bgColor="blue-dark">
       <IllustratedLayoutPanel iconPath={BackgroundFrameIcon}>
-        <div className="flex justify-center flex-col items-center px-14 ">
+        <Box flexDirection='column' flexJustifyContent='center' flexAlignItems='center' className="px-14 h-screen">
           <img src={SmallPanda} className=" w-[32rem] ms-96" alt="Get Started Panda" />
-          <div className=" flex flex-col gap-6 items-center">
+          <Box flexDirection='column' flexJustifyContent='center' flexAlignItems='center' className="gap-6">
             <img src={BubbleText} className="w-96 " alt="text" />
             <CustomButton
               onClick={navToGetStarted}
@@ -23,8 +24,8 @@ const NotAParent = () => {
             >
               <Text color='black' bold>Back</Text>
             </CustomButton>
-          </div>
-        </div>
+          </Box>
+        </Box>
       </IllustratedLayoutPanel>
     </Page>
   );

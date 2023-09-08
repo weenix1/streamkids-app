@@ -20,11 +20,17 @@ function useNavToParent(): () => void {
   return () => navigate('/parent');
 }
 
+function useNavToRegistration(): () => void {
+  const navigate = useNavigate();
+  return () => navigate('/registration');
+}
+
 const RoutingS = {
   useNavToGetStarted,
   useNavToNotAParent,
   useNavToParent,
   goBack,
+  useNavToRegistration,
 };
 
 export default RoutingS;

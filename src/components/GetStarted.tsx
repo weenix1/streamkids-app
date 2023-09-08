@@ -1,14 +1,14 @@
 import Page from './Page';
-import IllustratedLayoutPanel from './IllustratedLayoutPanel';
+import IllustratedLayoutPanel from './BaseUi/IllustratedLayoutPanel';
 import BackgroundFrameIcon from '../assets/icons/Frame.svg';
 import panda from '../assets/icons/panda.svg';
-import LayoutPanel from './LayoutPanel';
-import Text from './Text';
-import Title from './Title';
-import CustomButton from './CustomButton';
+import LayoutPanel from './BaseUi/LayoutPanel';
+import Text from './BaseUi/Text';
+import Title from './BaseUi/Title';
+import CustomButton from './BaseUi/CustomButton';
 import { useState } from 'react';
 import RoutingS from '../Services/RoutingS';
-import Box from './Box';
+import Box from './BaseUi/Box';
 
 const GetStarted = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,9 +19,8 @@ const GetStarted = () => {
     <Page bgColor="blue-dark">
       <IllustratedLayoutPanel iconPath={BackgroundFrameIcon}>
         <LayoutPanel>
-          <Box flexJustifyContent='center' flexDirection='column' flexAlignItems='center' className="gap-24">
+          <Box flexJustifyContent='center' flexDirection='column' flexAlignItems='center' className="gap-24 h-screen">
             <img src={panda} className="w-96" alt="Get Started Panda" />
-
             {!isOpen && (
               <>
                 <Title color="blue">WELCOME TO KIDS STREAM</Title>

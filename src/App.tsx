@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import 'tailwindcss/tailwind.css';
 import LandingPage from './components/LandingPage';
-import Layout from './components/Layout';
+import Layout from './components/BaseUi/Layout';
 import GetStarted from './components/GetStarted';
 import NotAParent from './components/NotAParent';
 import ParentOption from './components/ParentOption';
