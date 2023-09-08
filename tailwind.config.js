@@ -24,7 +24,11 @@ export default withMT({
       sans: ['Poppins', 'sans-serif'],
       Montserrat: ['Montserrat Alternates', 'sans-serif'],
     },
-    extend: {},
+    extend: {
+      width: {
+        27: '27.875rem',
+      },
+    },
   },
   plugins: [],
 });

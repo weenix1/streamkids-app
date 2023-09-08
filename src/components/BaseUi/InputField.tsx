@@ -16,7 +16,7 @@ const configSizeValues: Record<ConfigSize, string> = {
   xs: 'w-40',
   sm: 'w-60',
   md: 'w-80',
-  lg: 'w-760',
+  lg: 'w-27',
   xl: 'w-full',
   '2xl': 'w-screen',
 };
