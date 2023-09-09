@@ -27,7 +27,8 @@ const GetStarted = () => {
                 <CustomButton
                   onClick={() => setIsOpen(true)}
                   bgColor='yellow'
-                  borderColor='gray'
+                  height='sm'
+                  borderR='lg'
                 >
                   <Text color='black' bold fontFamily='Montserrat'>LET’S GET STARTED</Text>
                 </CustomButton>
@@ -39,6 +40,7 @@ const GetStarted = () => {
                   onClick={navToNotAparent}
                   bgColor='yellow'
                   borderColor='gray'
+                  height='sm'
                 >
                   <Text color='black' bold>I'M A CHILD</Text>
                 </CustomButton>
@@ -46,6 +48,7 @@ const GetStarted = () => {
                   onClick={navToParent}
                   bgColor='yellow'
                   borderColor='gray'
+                  height='sm'
                 >
                   <Text color='black' bold>I’M A PARENT</Text>
                 </CustomButton>

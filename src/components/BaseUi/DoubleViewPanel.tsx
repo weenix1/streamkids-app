@@ -12,16 +12,18 @@ interface DoubleViewPanelProps {
 const DoubleViewPanel = ({ leftContent, rightContent }: DoubleViewPanelProps) => {
   return (
     <Page>
-      <Box flexJustifyContent="center" flexDirection="column" className="md:flex-row h-screen">
-        <Box flexBasis="auto" className="bg-stream_color_blue">
-          <LayoutPanel>
-            {leftContent}
-          </LayoutPanel>
-        </Box>
-        <Box flexBasis="auto">
-          <LayoutPanel>
-            {rightContent}
-          </LayoutPanel>
+      <Box className="h-screen">
+        <Box flexJustifyContent="center" flexDirection="column" className="grid grid-cols-1 md:grid-cols-2">
+          <Box flexBasis="auto" className="bg-stream_color_blue ">
+            <LayoutPanel>
+              {leftContent}
+            </LayoutPanel>
+          </Box>
+          <Box flexBasis="auto" className="shrink-1">
+            <LayoutPanel>
+              {rightContent}
+            </LayoutPanel>
+          </Box>
         </Box>
       </Box>
     </Page>

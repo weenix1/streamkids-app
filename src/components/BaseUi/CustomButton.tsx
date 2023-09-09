@@ -19,7 +19,7 @@ interface CustomButtonProps {
 
 function CustomButton({
   color = 'white',
-  width = 'xl',
+  width = 'lg',
   bgColor = 'blue',
   borderColor = 'blue',
   height = 'xs',
@@ -33,9 +33,9 @@ function CustomButton({
   borderR = 'xl'
 }: CustomButtonProps) {
   const sizeMap: Record<ConfigSize, string> = {
-    xs: 'h-16',
-    sm: 'h-24',
-    md: 'h-32',
+    xs: 'h-12',
+    sm: 'h-16',
+    md: 'h-20',
     lg: 'h-40',
     xl: 'h-48',
     '2xl': 'h-64',
@@ -46,9 +46,9 @@ function CustomButton({
     xs: 'w-24',
     sm: 'w-32',
     md: 'w-40',
-    lg: 'w-48',
-    xl: 'w-64',
-    '2xl': 'w-80',
+    lg: 'w-64',
+    xl: 'w-80',
+    '2xl': 'w-96',
   };
 
   return (

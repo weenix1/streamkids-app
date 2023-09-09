@@ -132,6 +132,8 @@ function LandingPage() {
             </Box>
             <CustomButton
               bgColor='blue'
+              height='sm'
+              width='lg'
             >
               {t('what_we_offer_sign_up_button')}
             </CustomButton>

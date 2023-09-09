@@ -30,7 +30,7 @@ function JumboCard() {
           </Title>
           <Text color='white' bold>{t('landing_subtitle')} </Text>
           <div className="pt-4 md:pt-14">
-            <CustomButton bgColor='blue' color='white' height='xs' width='xl' onClick={navToGetStarted} dataTestId="custom-button-test">
+            <CustomButton bgColor='blue' color='white' height='sm' width='lg' onClick={navToGetStarted} dataTestId="custom-button-test">
               {t('landing_button')}
             </CustomButton>
           </div>
