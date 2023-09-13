@@ -8,7 +8,7 @@ import EyeIcon from '../assets/icons/EyeIcon'
 import CustomButton from "./BaseUi/CustomButton";
 
 
-const Registration = () => {
+const Login = () => {
   return (
 
     <DoubleViewPanel leftContent={
@@ -18,12 +18,10 @@ const Registration = () => {
       </Box>
     } rightContent={
       <Box flexDirection="column" flexAlignItems="center" flexJustifyContent="center" className="gap-20 w-full">
-        <Title color="light_gray">Hello Parent, please put in your details to sign up</Title>
+        <Title color="light_gray">Hello Parent, please put in your details to login</Title>
         <Box flexDirection="column" textAlign="start" className="gap-6">
-          <InputField label="Name" type="text" value="" width="lg"></InputField>
           <InputField label="Email" type="email" width="lg"></InputField>
-          <InputField label="Phone number" type="tel" width="lg"></InputField>
-          <InputField label="Password" type="password" icon={<EyeIcon />} iconPosition="end" width="lg"></InputField>
+          <InputField label="Password" type="password" forgotPassword icon={<EyeIcon />} iconPosition="end" width="lg"></InputField>
         </Box>
         <Box flexDirection="column" className="gap-6">
           <CustomButton
@@ -31,14 +29,14 @@ const Registration = () => {
             width="xl"
             borderR="md"
           >
-            <Text color='white' bold>SIGN UP</Text>
+            <Text color='white' bold>Sign In</Text>
           </CustomButton>
-          <Text color='black' bold>Already have an account?{' '}
+          <Text color='black' bold>Don't have an account?{' '}
             <a
               className="text-stream_primary"
               href="#"
             >
-              Please login
+              Sign Up
             </a>
           </Text>
         </Box>
@@ -47,4 +45,4 @@ const Registration = () => {
   )
 }
 
-export default Registration;
+export default Login;

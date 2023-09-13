@@ -6,6 +6,10 @@ import GetStarted from './components/GetStarted';
 import NotAParent from './components/NotAParent';
 import ParentOption from './components/ParentOption';
 import Registration from './components/Registration';
+import Login from './components/Login';
+import ForgetPassword from './components/ForgetPassword';
+import ResetPassword from './components/ResetPassword';
+import Otp from './components/Otp';
 
 function App() {
   return (
@@ -17,6 +21,10 @@ function App() {
           <Route path="/notaparent" element={<NotAParent />} />
           <Route path="/parent" element={<ParentOption />} />
           <Route path="/registration" element={<Registration />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/forgetPassword' element={<ForgetPassword />} />
+          <Route path='/resetpassword' element={<ResetPassword />} />
+          <Route path='/otp' element={<Otp />} />
         </Routes>
       </BrowserRouter>
     </Layout>

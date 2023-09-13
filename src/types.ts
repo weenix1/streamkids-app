@@ -15,6 +15,7 @@ export type ConfigColor =
   | 'white'
   | 'blue-dark'
   | 'gray'
+  | 'light_gray'
   | 'brown'
   | 'deep-orange'
   | 'orange'
@@ -54,6 +55,7 @@ export const ConfigColorValues: ConfigColor[] = [
   'white',
   'blue-dark',
   'gray',
+  'light_gray',
   'brown',
   'deep-orange',
   'orange',
@@ -80,6 +82,7 @@ export const ConfigBorderValues: Record<ConfigColor, string> = {
   white: 'border-stream_white',
   'blue-dark': 'border-stream_color_blue',
   gray: 'border-stream_dark_gray',
+  light_gray: 'border-stream_light_gray',
   brown: 'border-stream_brown',
   'deep-orange': 'border-stream_deep-orange',
   orange: 'border-stream_orange',
@@ -106,6 +109,7 @@ export const ConfigTextValues: Record<ConfigColor, string> = {
   white: 'text-stream_white',
   'blue-dark': 'text-stream_color_blue',
   gray: 'text-stream_dark_gray',
+  light_gray: 'text-stream_light_gray',
   brown: 'text-stream_brown',
   'deep-orange': 'text-stream_deep-orange',
   orange: 'text-stream_orange',
@@ -132,6 +136,7 @@ export const ConfigBackGroundValues: Record<ConfigColor, string> = {
   white: 'bg-stream_white',
   'blue-dark': 'bg-stream_color_blue',
   gray: 'bg-stream_dark_gray',
+  light_gray: 'bg-stream_light_gray',
   brown: 'bg-stream_brown',
   'deep-orange': 'bg-stream_deep-orange',
   orange: 'bg-stream_orange',
