@@ -6,9 +6,13 @@ import Title from "./BaseUi/Title";
 import InputField from "./BaseUi/InputField";
 import EyeIcon from '../assets/icons/EyeIcon'
 import CustomButton from "./BaseUi/CustomButton";
+import RoutingS from "../Services/RoutingS";
 
 
 const Login = () => {
+
+  const navToRegistration = RoutingS.useNavToRegistration();
+
   return (
 
     <DoubleViewPanel leftContent={
@@ -34,7 +38,7 @@ const Login = () => {
           <Text color='black' bold>Don't have an account?{' '}
             <a
               className="text-stream_primary"
-              href="#"
+              onClick={navToRegistration}
             >
               Sign Up
             </a>

@@ -6,11 +6,13 @@ import Title from "./BaseUi/Title";
 import InputField from "./BaseUi/InputField";
 import EyeIcon from '../assets/icons/EyeIcon'
 import CustomButton from "./BaseUi/CustomButton";
+import RoutingS from "../Services/RoutingS";
 
 
 const Registration = () => {
-  return (
 
+  const navToLogin = RoutingS.useNavToLogin();
+  return (
     <DoubleViewPanel leftContent={
       <Box flexDirection="column" flexAlignItems="center" flexJustifyContent="center" className="gap-20 w-full">
         <img src={SignUpIcon} alt="Get Started Panda" />
@@ -36,7 +38,7 @@ const Registration = () => {
           <Text color='black' bold>Already have an account?{' '}
             <a
               className="text-stream_primary"
-              href="#"
+              onClick={navToLogin}
             >
               Please login
             </a>

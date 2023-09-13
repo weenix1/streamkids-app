@@ -25,12 +25,48 @@ function useNavToRegistration(): () => void {
   return () => navigate('/registration');
 }
 
+function useNavToLogin(): () => void {
+  const navigate = useNavigate();
+  return () => navigate('/login');
+}
+
+function useNavToEnterOtp(): () => void {
+  const navigate = useNavigate();
+  return () => navigate('/enterotp');
+}
+
+function useNavForgetPassword(): () => void {
+  const navigate = useNavigate();
+  return () => navigate('/forgetpassword');
+}
+
+function useNavToResetPassword(): () => void {
+  const navigate = useNavigate();
+  return () => navigate('/resetpassword');
+}
+
+function useNavToHome(): () => void {
+  const navigate = useNavigate();
+  return () => navigate('/home');
+}
+
+function useNavChildProfile(): () => void {
+  const navigate = useNavigate();
+  return () => navigate('/childprofile');
+}
+
 const RoutingS = {
   useNavToGetStarted,
   useNavToNotAParent,
   useNavToParent,
   goBack,
   useNavToRegistration,
+  useNavToLogin,
+  useNavToEnterOtp,
+  useNavForgetPassword,
+  useNavToResetPassword,
+  useNavToHome,
+  useNavChildProfile,
 };
 
 export default RoutingS;

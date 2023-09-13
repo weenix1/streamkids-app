@@ -9,7 +9,7 @@ import Registration from './components/Registration';
 import Login from './components/Login';
 import ForgetPassword from './components/ForgetPassword';
 import ResetPassword from './components/ResetPassword';
-import Otp from './components/Otp';
+import EnterOtp from './components/EnterOtp';
 
 function App() {
   return (
@@ -24,7 +24,7 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/forgetPassword' element={<ForgetPassword />} />
           <Route path='/resetpassword' element={<ResetPassword />} />
-          <Route path='/otp' element={<Otp />} />
+          <Route path='/enterOtp' element={<EnterOtp />} />
         </Routes>
       </BrowserRouter>
     </Layout>
