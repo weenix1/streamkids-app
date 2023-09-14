@@ -7,7 +7,7 @@ import {
   Button,
 } from '@material-tailwind/react';
 import Text from './Text';
-import { ConfigBackGroundValues, ConfigColor, ConfigPosition, ConfigSize } from '../../types';
+import { ConfigBackGroundValues, ConfigColor, ConfigPosition, ConfigSize, ConfigTextValues } from '../../types';
 import { useCountries } from "use-react-countries";
 import Box from './Box';
 
@@ -20,6 +20,7 @@ interface InputFieldProps {
   iconPosition?: ConfigPosition;
   type?: 'text' | 'password' | 'email' | 'tel';
   bgColor?: ConfigColor;
+  color?: ConfigColor;
   forgotPassword?: boolean;
   otp?: boolean;
 }
@@ -42,6 +43,7 @@ const InputField: React.FC<InputFieldProps> = ({
   iconPosition = 'end',
   type = 'text',
   bgColor = 'white_text',
+  color = 'light_gray',
   forgotPassword = false,
   otp = false,
 }) => {
@@ -72,7 +74,7 @@ const InputField: React.FC<InputFieldProps> = ({
   return (
     <Box flexDirection='column' className={`${widthValue}`}>
       <Box flexJustifyContent='between'>
-        <Text color='light_gray'>{label}</Text>
+        <Text color={color}>{label}</Text>
         {forgotPassword && <Box className='pr-16'><Text color='blue' bold>Forgot Password?</Text> </Box>}
       </Box>
       {

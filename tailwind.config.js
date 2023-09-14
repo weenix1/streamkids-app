@@ -29,6 +29,7 @@ export default withMT({
     extend: {
       width: {
         27: '27.875rem',
+        39: '39.0625rem',
       },
     },
   },

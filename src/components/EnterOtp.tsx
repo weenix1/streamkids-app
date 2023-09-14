@@ -10,7 +10,7 @@ import RoutingS from "../Services/RoutingS";
 
 
 const EnterOtp = () => {
-  const navToChildProfile = RoutingS.useNavChildProfile();
+  const navToChildProfile = RoutingS.useNavChildProfileSetUp();
   return (
     <DoubleViewPanel leftContent={
       <Box flexDirection="column" flexAlignItems="center" flexJustifyContent="center" className="gap-20 w-full">

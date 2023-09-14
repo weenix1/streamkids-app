@@ -50,7 +50,7 @@ function useNavToHome(): () => void {
   return () => navigate('/home');
 }
 
-function useNavChildProfile(): () => void {
+function useNavChildProfileSetUp(): () => void {
   const navigate = useNavigate();
   return () => navigate('/childprofile');
 }
@@ -66,7 +66,7 @@ const RoutingS = {
   useNavForgetPassword,
   useNavToResetPassword,
   useNavToHome,
-  useNavChildProfile,
+  useNavChildProfileSetUp,
 };
 
 export default RoutingS;

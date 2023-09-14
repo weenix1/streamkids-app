@@ -10,6 +10,7 @@ import Login from './components/Login';
 import ForgetPassword from './components/ForgetPassword';
 import ResetPassword from './components/ResetPassword';
 import EnterOtp from './components/EnterOtp';
+import ChildProfileSetUp from './components/ChildProfileSetUp';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path='/forgetPassword' element={<ForgetPassword />} />
           <Route path='/resetpassword' element={<ResetPassword />} />
           <Route path='/enterOtp' element={<EnterOtp />} />
+          <Route path='/childprofile' element={<ChildProfileSetUp />} />
         </Routes>
       </BrowserRouter>
     </Layout>
