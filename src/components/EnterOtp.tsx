@@ -24,7 +24,6 @@ const EnterOtp = () => {
           <Text color="light_gray" bold>Enter OTP</Text>
           <Text color="light_gray">A 6 digit OTP was sent to 09012345678, kindly enter the code below to reset password.</Text>
           <Otp islabel bgColor="white_text" />
-
         </Box>
         <Box flexDirection="column" className="gap-6">
           <CustomButton

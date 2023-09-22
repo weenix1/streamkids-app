@@ -7,8 +7,34 @@ import IllustratedLayoutPanel from './BaseUi/IllustratedLayoutPanel';
 import Text from './BaseUi/Text';
 import Box from './BaseUi/Box';
 import InputField from './BaseUi/InputField';
+import FilterDropDown from './BaseUi/FilterDropDown';
+import FilterDropDownItem from './BaseUi/FilterDropDownItem';
+import { useState } from 'react';
 
 const ChildProfileSetUp = () => {
+
+  const [age, setAge] = useState('')
+
+  console.log('age', age)
+
+  const childAgeArray = [
+    '1',
+    '2',
+    '3',
+    '4',
+    '5',
+    '6',
+    '7',
+    '8',
+    '9',
+    '10',
+    '11',
+    '12',
+    '13',
+    '14',
+    '15'
+  ]
+
   return (
     <Page bgColor="blue-dark">
       <IllustratedLayoutPanel iconPath={BackgroundFrameIcon}>
@@ -17,7 +43,16 @@ const ChildProfileSetUp = () => {
           <Box flexDirection='column' flexJustifyContent='center' flexAlignItems='center' className="gap-6">
             <Box flexDirection='column' flexAlignItems='center' flexJustifyContent='center' className='w-39 h-72 shrink-0 rounded-md border border-dashed border-stream_secondary gap-4'>
               <InputField bgColor='white' color='white' label="Child’s Name" width="md" />
-              <InputField bgColor='white' color='white' label="Child’s age" width="md" icon={<img src={ArrowDropDown} alt="Get Started Panda" />} iconPosition='end' />
+              <FilterDropDown root={
+                <InputField bgColor='white' color='white' label="Child’s age" width="md" icon={<img src={ArrowDropDown} alt="Get Started Panda" />} iconPosition='end' value={age} />
+              } >
+                {childAgeArray.map((age) => (
+                  <FilterDropDownItem value={age} onClick={() => {
+                    setAge(age)
+                  }} />
+                ))
+                }
+              </FilterDropDown>
             </Box>
             <Box flexDirection="column" className="gap-6">
               <CustomButton

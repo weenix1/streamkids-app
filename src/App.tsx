@@ -25,7 +25,7 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/forgetPassword' element={<ForgetPassword />} />
           <Route path='/resetpassword' element={<ResetPassword />} />
-          <Route path='/enterOtp' element={<EnterOtp />} />
+          <Route path='/enterotp' element={<EnterOtp />} />
           <Route path='/childprofile' element={<ChildProfileSetUp />} />
         </Routes>
       </BrowserRouter>

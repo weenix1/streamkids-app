@@ -12,6 +12,7 @@ import RoutingS from "../Services/RoutingS";
 const Login = () => {
 
   const navToRegistration = RoutingS.useNavToRegistration();
+  const navToEnterOtp = RoutingS.useNavToEnterOtp();
 
   return (
 
@@ -32,6 +33,7 @@ const Login = () => {
             bgColor='blue'
             width="xl"
             borderR="md"
+            onClick={navToEnterOtp}
           >
             <Text color='white' bold>Sign In</Text>
           </CustomButton>
