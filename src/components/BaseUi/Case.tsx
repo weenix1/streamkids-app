@@ -12,7 +12,7 @@ export const Case: FunctionComponent<PropsWithChildren<CaseProperties>> = ({
   <div className="flex-row flex-1 py-2">
     {title && (
       <div>
-        <Text color='gray'>{title}</Text>
+        <Text color='light_gray'>{title}</Text>
       </div>
     )}
     <div className="my-1 mx-1">{children}</div>
