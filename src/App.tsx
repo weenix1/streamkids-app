@@ -12,6 +12,7 @@ import ResetPassword from './components/ResetPassword';
 import EnterOtp from './components/EnterOtp';
 import ChildProfileSetUp from './components/ChildProfileSetUp';
 import HomeScreen from './components/HomeScreen';
+import StoryBook from './components/StoryBook';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path='/enterotp' element={<EnterOtp />} />
           <Route path='/childprofile' element={<ChildProfileSetUp />} />
           <Route path='/homescreen' element={<HomeScreen />} />
+          <Route path='/storybook' element={<StoryBook />} />
         </Routes>
       </BrowserRouter>
     </Layout>

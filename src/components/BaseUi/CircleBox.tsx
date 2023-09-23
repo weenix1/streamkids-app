@@ -38,7 +38,7 @@ const CircleBox = ({ width, height, bgColor = 'blue', iconPosition = 'center', t
       input: 'pl-8',
     },
     center: {
-      icon: 'absolute top-1/4 left-[15%] transform -translate-x-1/2 -translate-y-1/2',
+      icon: 'absolute top-2/4 left-2/4 transform -translate-x-1/2 -translate-y-1/2',
       input: '',
     },
     end: {
@@ -56,10 +56,11 @@ const CircleBox = ({ width, height, bgColor = 'blue', iconPosition = 'center', t
   return (
     <Box>
       <div className={`relative ${widthValue} ${heightValue} ${ConfigBackGroundValues[bgColor]} rounded-full`}>
+        <div className={`${selectedStyle.icon}`}>
+          <Text bold color="blue">{text}</Text>
+        </div>
       </div>
-      <div className={`${selectedStyle.icon}`}>
-        <Text bold color="blue">{text}</Text>
-      </div>
+
     </Box>
 
   );

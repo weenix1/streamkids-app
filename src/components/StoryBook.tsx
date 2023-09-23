@@ -1,8 +1,11 @@
+import CircleStory from "./BaseUi/CircleStory";
+import LayoutPanel from "./BaseUi/LayoutPanel";
+
 const StoryBook = () => {
   return (
-    <div>
-      <h1>StoryBook</h1>
-    </div>
+    <LayoutPanel>
+      <CircleStory />
+    </LayoutPanel>
   );
 }
 
