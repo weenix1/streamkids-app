@@ -14,10 +14,16 @@ import { useState } from 'react';
 const ChildProfileSetUp = () => {
 
   const [age, setAge] = useState('')
+  const [name, setName] = useState('')
 
-  console.log('age', age)
+  console.log({ age, name })
 
-  const handleAgeChange = (e: any) => {
+
+  const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setName(e.target.value)
+  }
+
+  const handleAgeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setAge(e.target.value)
   }
 
@@ -40,10 +46,8 @@ const ChildProfileSetUp = () => {
     id: '5',
     value: '5'
   }
-
-
-
   ]
+
 
   return (
     <Page bgColor="blue-dark">
@@ -52,7 +56,7 @@ const ChildProfileSetUp = () => {
           <img src={ChildPanda} alt="Get Started Panda" />
           <Box flexDirection='column' flexJustifyContent='center' flexAlignItems='center' className="gap-6">
             <Box flexDirection='column' flexAlignItems='center' flexJustifyContent='center' className='w-39 h-72 shrink-0 rounded-md border border-dashed border-stream_secondary gap-4'>
-              <InputField bgColor='white' color='white' label="Child’s Name" width="md" />
+              <InputField bgColor='white' color='white' label="Child’s Name" width="md" value={name} onChange={handleNameChange} />
               <FilterDropDown root={
                 <InputField bgColor='white' color='white' label="Child’s age" width="md" icon={<img src={ArrowDropDown} alt="Get Started Panda" />} iconPosition='end' value={age} onChange={handleAgeChange} />
               } >
@@ -67,6 +71,10 @@ const ChildProfileSetUp = () => {
                 bgColor='yellow'
                 width="xl"
                 borderR="md"
+                onClick={() => {
+                  handleAgeChange;
+                  handleNameChange
+                }}
               >
                 <Text color='black' bold>Save</Text>
               </CustomButton>

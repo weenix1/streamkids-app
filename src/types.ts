@@ -34,7 +34,8 @@ export type ConfigColor =
   | 'pink'
   | 'red'
   | 'black'
-  | 'white_text';
+  | 'white_text'
+  | 'light_pink';
 
 // we need to keep this list in sync with the tailwind.config.js, unfortunately ts is not able to have real static types
 // if you change the type of this array, then add the entry in this values array
@@ -74,6 +75,7 @@ export const ConfigColorValues: ConfigColor[] = [
   'red',
   'black',
   'white_text',
+  'light_pink',
 ];
 
 export const ConfigBorderValues: Record<ConfigColor, string> = {
@@ -100,6 +102,7 @@ export const ConfigBorderValues: Record<ConfigColor, string> = {
   red: 'border-stream_red',
   black: 'border-stream_black',
   white_text: 'border-stream_white_text',
+  light_pink: 'border-stream_light_pink',
 };
 
 export const ConfigTextValues: Record<ConfigColor, string> = {
@@ -126,6 +129,7 @@ export const ConfigTextValues: Record<ConfigColor, string> = {
   red: 'text-stream_red',
   black: 'text-stream_black',
   white_text: 'text-stream_white_text',
+  light_pink: 'text-stream_light_pink',
 };
 
 export const ConfigBackGroundValues: Record<ConfigColor, string> = {
@@ -152,6 +156,7 @@ export const ConfigBackGroundValues: Record<ConfigColor, string> = {
   red: 'bg-stream_red',
   black: 'bg-stream_black',
   white_text: 'bg-stream_white_text',
+  light_pink: 'bg-stream_light_pink',
 };
 
 export type ConfigPosition = 'start' | 'center' | 'end';

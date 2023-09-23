@@ -131,7 +131,7 @@ const InputField: React.FC<InputFieldProps> = ({
               type={type}
               value={value}
               onChange={onChange}
-              className={` ${selectedStyle.input} ${ConfigBackGroundValues[bgColor]}`}
+              className={`${selectedStyle.input} bg-${bgColor}`}
             />
             {icon && <div className={selectedStyle.icon}>{icon}</div>}
           </div>}

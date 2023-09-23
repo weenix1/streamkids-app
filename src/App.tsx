@@ -11,6 +11,7 @@ import ForgetPassword from './components/ForgetPassword';
 import ResetPassword from './components/ResetPassword';
 import EnterOtp from './components/EnterOtp';
 import ChildProfileSetUp from './components/ChildProfileSetUp';
+import HomeScreen from './components/HomeScreen';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path='/resetpassword' element={<ResetPassword />} />
           <Route path='/enterotp' element={<EnterOtp />} />
           <Route path='/childprofile' element={<ChildProfileSetUp />} />
+          <Route path='/homescreen' element={<HomeScreen />} />
         </Routes>
       </BrowserRouter>
     </Layout>
