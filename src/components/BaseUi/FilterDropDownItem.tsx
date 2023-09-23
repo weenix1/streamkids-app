@@ -6,7 +6,7 @@ import Text from './Text';
 interface FilterDropDownItemProps {
   value?: string;
   fontSize?: ConfigSize;
-  onClick?: () => void;
+  onClick?: (e: any) => void;
 }
 
 const FilterDropDownItem = ({
@@ -19,12 +19,9 @@ const FilterDropDownItem = ({
       key={value}
       value={value}
       className={`p-0 flex justify-between items-center gap-3 text-${fontSize}`}
+      onClick={(e) => onClick && onClick(e)}
     >
-      <Text onClick={() => {
-        if (onClick) {
-          onClick();
-        }
-      }}>{value}</Text>
+      <Text >{value}</Text>
     </MenuItem>
 
   );

@@ -17,22 +17,32 @@ const ChildProfileSetUp = () => {
 
   console.log('age', age)
 
-  const childAgeArray = [
-    '1',
-    '2',
-    '3',
-    '4',
-    '5',
-    '6',
-    '7',
-    '8',
-    '9',
-    '10',
-    '11',
-    '12',
-    '13',
-    '14',
-    '15'
+  const handleAgeChange = (e: any) => {
+    setAge(e.target.value)
+  }
+
+  const childAgeArray = [{
+    id: '1',
+    value: '1'
+  }, {
+    id: '2',
+    value: '2'
+  },
+  {
+    id: '3',
+    value: '3'
+  },
+  {
+    id: '4',
+    value: '4'
+  },
+  {
+    id: '5',
+    value: '5'
+  }
+
+
+
   ]
 
   return (
@@ -44,12 +54,10 @@ const ChildProfileSetUp = () => {
             <Box flexDirection='column' flexAlignItems='center' flexJustifyContent='center' className='w-39 h-72 shrink-0 rounded-md border border-dashed border-stream_secondary gap-4'>
               <InputField bgColor='white' color='white' label="Child’s Name" width="md" />
               <FilterDropDown root={
-                <InputField bgColor='white' color='white' label="Child’s age" width="md" icon={<img src={ArrowDropDown} alt="Get Started Panda" />} iconPosition='end' value={age} />
+                <InputField bgColor='white' color='white' label="Child’s age" width="md" icon={<img src={ArrowDropDown} alt="Get Started Panda" />} iconPosition='end' value={age} onChange={handleAgeChange} />
               } >
                 {childAgeArray.map((age) => (
-                  <FilterDropDownItem value={age} onClick={() => {
-                    setAge(age)
-                  }} />
+                  <FilterDropDownItem value={age.value} onClick={(e: any) => handleAgeChange(e)} />
                 ))
                 }
               </FilterDropDown>
