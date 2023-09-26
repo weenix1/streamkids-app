@@ -1,11 +1,11 @@
 import LayoutPanel from "./BaseUi/LayoutPanel";
-import MovieCard from "./BaseUi/MovieCard";
+import CardWithFooter from "./BaseUi/CardWithFooter";
 
 const MovieCardStory = () => {
 
   return (
     <LayoutPanel>
-      <MovieCard title='Power rangers' duration="1h 20min" />
+      <CardWithFooter title='Power rangers' duration="1h 20min" iconPosition='top' />
     </LayoutPanel>
   )
 

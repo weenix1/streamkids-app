@@ -159,6 +159,6 @@ export const ConfigBackGroundValues: Record<ConfigColor, string> = {
   light_pink: 'bg-stream_light_pink',
 };
 
-export type ConfigPosition = 'start' | 'center' | 'end';
+export type ConfigPosition = 'start' | 'center' | 'end' | 'top' | 'bottom' | 'left' | 'right';
 export type ConfigSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl';
 export type ConfigBorderRadius = 'none' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | 'full';

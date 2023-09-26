@@ -7,7 +7,7 @@ import {
   Button,
 } from '@material-tailwind/react';
 import Text from './Text';
-import { ConfigBackGroundValues, ConfigColor, ConfigPosition, ConfigSize, ConfigTextValues } from '../../types';
+import { ConfigBackGroundValues, ConfigColor, ConfigPosition, ConfigSize } from '../../types';
 import { useCountries } from "use-react-countries";
 import Box from './Box';
 
@@ -64,6 +64,22 @@ const InputField: React.FC<InputFieldProps> = ({
     end: {
       icon: 'absolute top-1/2 right-2 transform -translate-y-1/2',
       input: 'pr-8',
+    },
+    top: {
+      icon: 'absolute top-2 left-2 transform -translate-y-1/2',
+      input: 'pt-8',
+    },
+    right: {
+      icon: 'absolute top-1/2 right-2 transform -translate-y-1/2',
+      input: 'pr-8',
+    },
+    bottom: {
+      icon: 'absolute bottom-2 left-2 transform -translate-y-1/2',
+      input: 'pb-8',
+    },
+    left: {
+      icon: 'absolute top-1/2 left-2 transform -translate-y-1/2',
+      input: 'pl-8',
     },
   };
 
