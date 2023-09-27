@@ -13,9 +13,10 @@ interface CardWithFooterProps {
   duration?: string;
   title?: string;
   iconPosition: ConfigPosition;
+  isFooter?: boolean;
 }
 
-const CardWithFooter = ({ duration, title, iconPosition }: CardWithFooterProps) => {
+const CardWithFooter = ({ duration, title, iconPosition, isFooter = false }: CardWithFooterProps) => {
 
   const alignmentStyles = {
     start: {
@@ -48,7 +49,6 @@ const CardWithFooter = ({ duration, title, iconPosition }: CardWithFooterProps) 
     },
   };
 
-
   const selectedStyle = alignmentStyles[iconPosition] || alignmentStyles.end; // default to 'left' if no valid alignment provided
 
   return (
@@ -63,20 +63,14 @@ const CardWithFooter = ({ duration, title, iconPosition }: CardWithFooterProps) 
           src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80"
           alt="ui/ux review check"
         />
-        {/* <div className="absolute bg-stream_white rounded-full top-2 left-2 w-32 h-8 p-4 flex justify-center items-center">
-          <Text color="light_gray" bold>
-            {duration}
-          </Text>
-        </div> */}
         <Box className={`${selectedStyle.text}`}>
           <ChipPill value={duration} bgColor="white" textColor="black" borderColor="white" />
-
         </Box>
       </CardHeader>
-      <CardFooter className="flex items-center justify-between py-2">
+      {isFooter && <CardFooter className="flex items-center justify-between py-2">
         <Text color="black"> {title} </Text>
         <img src={MoreIcon} alt="more icon" />
-      </CardFooter>
+      </CardFooter>}
     </Card>
   );
 }
