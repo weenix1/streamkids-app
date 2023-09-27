@@ -23,8 +23,8 @@ const CardWithFooter = ({ duration, title, iconPosition }: CardWithFooterProps) 
       text: 'absolute top-1/2 left-2 transform -translate-y-1/2',
     },
     center: {
-      icon: 'absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2',
-      text: 'absolute top-1/2 left-2 transform -translate-y-1/2',
+      icon: 'absolute top-14 left-10 transform -translate-x-1/2 -translate-y-1/2',
+      text: 'absolute top-14 left-10 transform -translate-y-1/2',
     },
     end: {
       icon: 'absolute top-1/2 right-2 transform -translate-y-1/2',
