@@ -35,15 +35,31 @@ const CircleBox = ({ width, height, bgColor = 'blue', iconPosition = 'center', t
   const alignmentStyles = {
     start: {
       icon: 'absolute top-1/2 left-2 transform -translate-y-1/2',
-      input: 'pl-8',
+      text: 'absolute top-1/2 left-2 transform -translate-y-1/2',
     },
     center: {
-      icon: 'absolute top-2/4 left-2/4 transform -translate-x-1/2 -translate-y-1/2',
-      input: '',
+      icon: 'absolute top-14 left-10 transform -translate-x-1/2 -translate-y-1/2',
+      text: 'absolute top-14 left-10 transform -translate-y-1/2',
     },
     end: {
       icon: 'absolute top-1/2 right-2 transform -translate-y-1/2',
-      input: 'pr-8',
+      text: 'absolute bottom-2 right-2 transform -translate-y-1/2',
+    },
+    top: {
+      icon: 'absolute top-2 left-2 transform -translate-y-1/2',
+      text: 'absolute top-6 left-2 transform -translate-y-1/2 ',
+    },
+    right: {
+      icon: 'absolute top-6 right-2 transform -translate-y-1/2',
+      text: 'absolute top-6 right-2 transform -translate-y-1/2',
+    },
+    bottom: {
+      icon: 'absolute bottom-2 left-2 transform -translate-y-1/2',
+      text: 'absolute bottom-2 left-2 transform -translate-y-1/2',
+    },
+    left: {
+      icon: 'absolute top-1/2 left-2 transform -translate-y-1/2',
+      text: 'absolute top-1/2 left-2 transform -translate-y-1/2',
     },
   };
 
