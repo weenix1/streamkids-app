@@ -76,26 +76,50 @@ const MovieCard = ({ duration, title, iconPosition, isFooter = false, isPlaying 
   const selectedStyle = alignmentStyles[iconPosition] || alignmentStyles.end; // default to 'left' if no valid alignment provided
 
   return (
-    <Card className={`${widthValue} ${heightValue} overflow-hidden `}>
-      <CardHeader
-        floated={false}
-        shadow={false}
-        color="transparent"
-        className="m-0 rounded-none"
-      >
-        <img
-          src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80"
-          alt="ui/ux review check"
-        />
-        <Box className={`${selectedStyle.text}`}>
-          <ChipPill value={duration} bgColor="white" textColor="black" borderColor="white" />
-        </Box>
-      </CardHeader>
-      {isFooter && <CardFooter className="flex items-center justify-between py-2">
-        <Text color="black"> {title} </Text>
-        <img src={MoreIcon} alt="more icon" />
-      </CardFooter>}
-    </Card>
+    <div>
+      {
+        isPlaying ? (<Card className={`${widthValue} ${heightValue} overflow-hidden `}>
+          <CardHeader
+            floated={false}
+            shadow={false}
+            color="transparent"
+            className="m-0 rounded-none"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80"
+              alt="ui/ux review check"
+            />
+            <Box className={`${selectedStyle.text}`}>
+              <ChipPill value={duration} bgColor="white" textColor="black" borderColor="white" />
+            </Box>
+          </CardHeader>
+          {isFooter && <CardFooter className="flex items-center justify-between py-2">
+            <Text color="black"> {title} </Text>
+            <img src={MoreIcon} alt="more icon" />
+          </CardFooter>}
+        </Card>) : (<Card className={`${widthValue} ${heightValue} overflow-hidden `}>
+          <CardHeader
+            floated={false}
+            shadow={false}
+            color="transparent"
+            className="m-0 rounded-none"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80"
+              alt="ui/ux review check"
+            />
+            <Box className={`${selectedStyle.text}`}>
+              <ChipPill value={duration} bgColor="white" textColor="black" borderColor="white" />
+            </Box>
+          </CardHeader>
+          {isFooter && <CardFooter className="flex items-center justify-between py-2">
+            <Text color="black"> {title} </Text>
+            <img src={MoreIcon} alt="more icon" />
+          </CardFooter>}
+        </Card>)
+      }
+    </div>
+
   );
 }
 
