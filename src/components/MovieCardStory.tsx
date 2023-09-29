@@ -53,6 +53,12 @@ const MovieCardStory = () => {
           <MovieCard width="sm" height="sm" title='Power rangers' duration="1h 20min" iconPosition='end' />
         </Case>
       </CaseGroup>
+
+      <CaseGroup title="Card playing">
+        <Case title="Playing">
+          <MovieCard width="sm" height="sm" title='Power rangers' duration="1h 20min" iconPosition='top' isPlaying isFooter />
+        </Case>
+      </CaseGroup>
     </LayoutPanel>
   )
 
