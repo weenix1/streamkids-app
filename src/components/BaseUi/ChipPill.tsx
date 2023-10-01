@@ -3,7 +3,7 @@ import Box from './Box';
 import { ConfigColor, ConfigSize } from '../../types';
 
 interface ChipPillProps {
-  value?: string;
+  value?: string | React.ReactNode;
   icon?: React.ReactNode;
   bgColor?: ConfigColor | 'white';
   textColor?: ConfigColor;

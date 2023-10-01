@@ -1,12 +1,14 @@
 import CircleStory from "./CircleStory";
 import LayoutPanel from "./BaseUi/LayoutPanel";
-import MovieCardStory from "./MovieCardStory";
+import PlayCardStory from "./PlayCardStory";
+import ProgressStepperStory from "./ProgressStepperStory";
 
 const StoryBook = () => {
   return (
     <LayoutPanel>
       <CircleStory />
-      <MovieCardStory />
+      <PlayCardStory />
+      <ProgressStepperStory />
     </LayoutPanel>
   );
 }

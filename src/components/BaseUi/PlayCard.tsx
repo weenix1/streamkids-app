@@ -9,12 +9,12 @@ import { ConfigBackGroundValues, ConfigColor, ConfigPosition, ConfigSize } from 
 import Box from "./Box";
 import ChipPill from "./ChipPill";
 
-interface MovieCardProps {
+interface PlayCardProps {
   duration?: string;
   title?: string;
-  icon?: React.ReactNode;
   iconPosition: ConfigPosition;
   isFooter?: boolean;
+  isPlaying?: boolean;
   height?: ConfigSize;
   width?: ConfigSize;
   bgColor?: ConfigColor;
@@ -38,7 +38,7 @@ const heightSizeValues: Record<ConfigSize, string> = {
   '2xl': 'h-screen',
 };
 
-const MovieCard = ({ title, iconPosition, height = 'md', width = 'md', icon }: MovieCardProps) => {
+const PlayCard = ({ duration, title, iconPosition, isFooter = false, isPlaying = false, height = 'md', width = 'md', bgColor = 'transparant_black' }: PlayCardProps) => {
 
   const widthValue = width ? widthSizeValues[width] : '';
   const heightValue = height ? heightSizeValues[height] : '';
@@ -90,15 +90,23 @@ const MovieCard = ({ title, iconPosition, height = 'md', width = 'md', icon }: M
           alt="ui/ux review check"
         />
         <Box className={`${selectedStyle.text}`}>
-          <ChipPill value={`${title}  ${icon}`} bgColor="white" textColor="black" borderColor="white" />
+          <ChipPill value={duration} bgColor="white" textColor="black" borderColor="white" />
         </Box>
       </CardHeader>
-
+      {isFooter && <CardFooter className="flex items-center justify-between py-2">
+        <Text color="black"> {title} </Text>
+        <img src={MoreIcon} alt="more icon" />
+      </CardFooter>}
+      {
+        isPlaying && <div className={`absolute inset-0 ${ConfigBackGroundValues[bgColor]} flex justify-center items-center`}>
+          <Text color="white">Now Playing</Text>
+        </div>
+      }
     </Card>
 
   );
 }
 
-export default MovieCard;
+export default PlayCard;
 
 //  
