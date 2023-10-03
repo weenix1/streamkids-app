@@ -1,10 +1,7 @@
 import {
   Card,
   CardHeader,
-  CardFooter,
 } from "@material-tailwind/react";
-import Text from "./Text";
-import MoreIcon from "../../assets/icons/more_vert.svg";
 import { ConfigBackGroundValues, ConfigColor, ConfigPosition, ConfigSize } from "../../types";
 import Box from "./Box";
 import ChipPill from "./ChipPill";
@@ -38,7 +35,7 @@ const heightSizeValues: Record<ConfigSize, string> = {
   '2xl': 'h-screen',
 };
 
-const MovieCard = ({ title, iconPosition, height = 'md', width = 'md', icon }: MovieCardProps) => {
+const MovieCard = ({ title, iconPosition, height = 'md', width = 'md', }: MovieCardProps) => {
 
   const widthValue = width ? widthSizeValues[width] : '';
   const heightValue = height ? heightSizeValues[height] : '';
@@ -90,7 +87,7 @@ const MovieCard = ({ title, iconPosition, height = 'md', width = 'md', icon }: M
           alt="ui/ux review check"
         />
         <Box className={`${selectedStyle.text}`}>
-          <ChipPill value={`${title}  ${icon}`} bgColor="white" textColor="black" borderColor="white" />
+          <ChipPill value={title} bgColor="white" textColor="black" borderColor="white" />
         </Box>
       </CardHeader>
 

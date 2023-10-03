@@ -5,6 +5,11 @@ import { Case } from "./BaseUi/Case";
 import MovieCard from "./BaseUi/MovieCard";
 import LoveIcon from "../assets/icons/LoveIcon";
 import EyeIcon from "../assets/icons/EyeIcon";
+import Eye from "../assets/icons/eye.svg";
+import PlayIcon from "../assets/icons/PlayIcon";
+import PauseIcon from "../assets/icons/PauseIcon";
+import SkipIcon from "../assets/icons/SkipIcon";
+import NextIcon from "../assets/icons/NextIcon";
 
 const PlayCardStory = () => {
 
@@ -65,13 +70,33 @@ const PlayCardStory = () => {
 
       <CaseGroup title="movie card ">
         <Case title="Playing">
-          <MovieCard width="sm" height="sm" title='Add to favorite' icon={<EyeIcon />} iconPosition='right' />
+          <MovieCard width="sm" height="sm" title='Add to favorite' iconPosition="right" />
         </Case>
         <Case title="Icon">
           <LoveIcon />
         </Case>
         <Case title="Icon">
+
+          <PlayIcon />
+
+        </Case>
+        <Case title="Icon">
+
+          <PauseIcon />
+
+        </Case>
+
+        <Case title="Icon">
+
+          <SkipIcon />
+
+        </Case>
+        <Case title="Icon">
+          <NextIcon backgroundColor="blue-dark" />
+        </Case>
+        <Case title="Icon">
           <EyeIcon />
+
         </Case>
       </CaseGroup>
     </LayoutPanel>
