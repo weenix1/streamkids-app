@@ -7,6 +7,7 @@ interface ProgressStepperProps {
   status?: ConfigColor;
   percentage?: number;
   dataTestId?: string;
+  width?: ConfigSize;
 }
 
 const ProgressStepper: React.FC<ProgressStepperProps> = ({
@@ -14,6 +15,7 @@ const ProgressStepper: React.FC<ProgressStepperProps> = ({
   percentage = 0,
   status = 'light_yellow',
   dataTestId = '',
+  width = 'xs',
 }) => {
   const sizeMap: Record<ConfigSize, string> = {
     xs: 'h-0.5',
@@ -24,6 +26,15 @@ const ProgressStepper: React.FC<ProgressStepperProps> = ({
     '2xl': 'h-4',
   };
 
+  const widthMap: Record<ConfigSize, string> = {
+    xs: 'w-40',
+    sm: 'w-27',
+    md: 'w-69',
+    lg: 'w-72',
+    xl: 'w-full',
+    '2xl': 'w-screen',
+  };
+
   const statusColor = `${ConfigBackGroundValues[status]}`;
   const customGrayColor = 'bg-stream_white';
 
@@ -31,8 +42,10 @@ const ProgressStepper: React.FC<ProgressStepperProps> = ({
 
   const coveredWidth = percentage > 100 ? 100 : percentage;
 
+  // ${widthMap[width]}
+
   return (
-    <Box className="w-auto gap-1 border rounded-full" data-testid={dataTestId}>
+    <Box className={`gap-1 border rounded-full ${widthMap[width]}`} data-testid={dataTestId}>
       <div
         key={`progress-stepper-`}
         className="flex flex-start flex-col items-start w-full "

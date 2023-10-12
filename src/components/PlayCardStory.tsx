@@ -5,13 +5,18 @@ import { Case } from "./BaseUi/Case";
 import MovieCard from "./BaseUi/MovieCard";
 import LoveIcon from "../assets/icons/LoveIcon";
 import EyeIcon from "../assets/icons/EyeIcon";
-import Eye from "../assets/icons/eye.svg";
 import PlayIcon from "../assets/icons/PlayIcon";
 import PauseIcon from "../assets/icons/PauseIcon";
 import SkipIcon from "../assets/icons/SkipIcon";
 import NextIcon from "../assets/icons/NextIcon";
 
 const PlayCardStory = () => {
+
+  const playIconMap: Record<string, React.ReactNode> = {
+    pauseIcon: <PauseIcon backgroundColor="white" size={100} />,
+    playIcon: <PlayIcon backgroundColor="white" size={100} />,
+  }
+
 
   return (
     <LayoutPanel>
@@ -70,7 +75,7 @@ const PlayCardStory = () => {
 
       <CaseGroup title="movie card ">
         <Case title="Playing">
-          <MovieCard width="sm" height="sm" title='Add to favorite' iconPosition="right" />
+          <MovieCard skipIcon={<SkipIcon size={100} backgroundColor="white" />} title='Add to favorite' iconPosition="right" progressBar />
         </Case>
         <Case title="Icon">
           <LoveIcon />
