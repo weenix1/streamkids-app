@@ -7,6 +7,11 @@ import Box from "./Box";
 import ChipPill from "./ChipPill";
 import React, { useState } from "react";
 import ProgressStepper from "./ProgressStepper";
+import PlayIcon from '../../assets/icons/PlayIcon';
+import PauseIcon from '../../assets/icons/PauseIcon';
+
+
+
 
 interface MovieCardProps {
   duration?: string;
@@ -20,11 +25,11 @@ interface MovieCardProps {
   skipIcon?: React.ReactNode;
   nextIcon?: React.ReactNode;
   playIcon?: React.ReactNode;
-  pauseIcon?: React.ReactNode;
+  isPlaying?: boolean;
   progressBar?: boolean
   onClick?: () => void;
   togglePlayIcon?: () => React.ReactNode;
-  pauseOrPlay?: React.ReactNode;
+
 }
 
 const widthSizeValues: Record<ConfigSize, string> = {
@@ -47,12 +52,9 @@ const heightSizeValues: Record<ConfigSize, string> = {
 
 
 
-const MovieCard = ({ title, iconPosition, height = 'md', width = 'lg', playIcon, nextIcon, skipIcon, pauseIcon, progressBar = false, pauseOrPlay }: MovieCardProps) => {
+const MovieCard = ({ title, iconPosition, height = 'md', width = 'lg', nextIcon, skipIcon, progressBar = false, isPlaying, onClick }: MovieCardProps) => {
   const iconVisibilityMap = {
-    pauseOrPlay: {
-      playIcon: false,
-      pauseIcon: false,
-    },
+    playIcon: false,
     nextIcon: false,
     skipIcon: false,
     progressBar: false
@@ -60,12 +62,14 @@ const MovieCard = ({ title, iconPosition, height = 'md', width = 'lg', playIcon,
 
   const [iconVisibility, setIconVisibility] = useState(iconVisibilityMap);
 
+  const playIconMap: Record<string, React.ReactNode> = {
+    isPlay: <PauseIcon backgroundColor="white" size={100} />,
+    isPause: <PlayIcon backgroundColor="white" size={100} />,
+  };
+
   const handleMouseEnter = () => {
     setIconVisibility({
-      pauseOrPlay: {
-        playIcon: !!playIcon,
-        pauseIcon: !!pauseIcon,
-      },
+      playIcon: !!playIconMap,
       nextIcon: !!nextIcon,
       skipIcon: !!skipIcon,
       progressBar: !!progressBar
@@ -114,16 +118,6 @@ const MovieCard = ({ title, iconPosition, height = 'md', width = 'lg', playIcon,
   const selectedStyle = alignmentStyles[iconPosition] || alignmentStyles.end; // default to 'left' if no valid alignment provided
 
 
-  const choosePLayPauseIcon = () => {
-    if (iconVisibility.pauseOrPlay.playIcon) {
-      return playIcon
-    }
-    if (iconVisibility.pauseOrPlay.pauseIcon) {
-      return pauseIcon
-    }
-    return null
-  }
-
   const playIconStyle = alignmentStyles.center
   const nextIconStyle = alignmentStyles.right
   const skipIconStyle = alignmentStyles.left
@@ -150,9 +144,9 @@ const MovieCard = ({ title, iconPosition, height = 'md', width = 'lg', playIcon,
       <Box className={`${selectedStyle.text}`}>
         <ChipPill value={title} bgColor="white" textColor="black" borderColor="white" />
       </Box>
-      {iconVisibility.pauseOrPlay.playIcon || iconVisibility.pauseOrPlay.pauseIcon && (
-        <Box className={`${playIconStyle.icon}`} >
-          {choosePLayPauseIcon()}
+      {iconVisibility.playIcon && (
+        <Box className={`${playIconStyle.icon}`} onClick={onClick}>
+          {isPlaying ? playIconMap.isPlay : playIconMap.isPause}
         </Box>
       )}
       {iconVisibility.nextIcon && (

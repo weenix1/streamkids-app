@@ -9,12 +9,14 @@ import PlayIcon from '../assets/icons/PlayIcon';
 import PauseIcon from '../assets/icons/PauseIcon';
 import SkipIcon from '../assets/icons/SkipIcon';
 import NextIcon from '../assets/icons/NextIcon';
+import { useState } from 'react';
 
 const PlayCardStory = () => {
-  const playIconMap: Record<string, React.ReactNode> = {
-    pauseIcon: <PauseIcon backgroundColor="white" size={100} />,
-    playIcon: <PlayIcon backgroundColor="white" size={100} />,
-  };
+  const [isPlaying, setIsPlaying] = useState(false);
+  const changePlayOrPause = () => {
+    setIsPlaying(!isPlaying)
+  }
+
 
   return (
     <LayoutPanel>
@@ -83,6 +85,9 @@ const PlayCardStory = () => {
         <Case title="Playing">
           <MovieCard
             skipIcon={<SkipIcon size={100} backgroundColor="white" />}
+            nextIcon={<NextIcon size={100} backgroundColor="white" />}
+            isPlaying={isPlaying}
+            onClick={changePlayOrPause}
             title="Add to favorite"
             iconPosition="right"
             progressBar

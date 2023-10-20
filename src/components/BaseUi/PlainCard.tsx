@@ -1,8 +1,6 @@
-import React from 'react';
 import { Card, CardHeader } from '@material-tailwind/react';
 import Title from './Title';
 import Text from './Text';
-
 interface Iprops {
   icon: string;
   title?: string;
