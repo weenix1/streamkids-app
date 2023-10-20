@@ -25,6 +25,8 @@ interface MovieCardProps {
   skipIcon?: React.ReactNode;
   nextIcon?: React.ReactNode;
   playIcon?: React.ReactNode;
+  handleNext?: () => void;
+  handleSkip?: () => void;
   isPlaying?: boolean;
   progressBar?: boolean
   onClick?: () => void;
@@ -52,7 +54,7 @@ const heightSizeValues: Record<ConfigSize, string> = {
 
 
 
-const MovieCard = ({ title, iconPosition, height = 'md', width = 'lg', nextIcon, skipIcon, progressBar = false, isPlaying, onClick }: MovieCardProps) => {
+const MovieCard = ({ title, iconPosition, height = 'md', width = 'lg', nextIcon, skipIcon, progressBar = false, isPlaying, onClick, handleNext, handleSkip }: MovieCardProps) => {
   const iconVisibilityMap = {
     playIcon: false,
     nextIcon: false,
@@ -150,12 +152,12 @@ const MovieCard = ({ title, iconPosition, height = 'md', width = 'lg', nextIcon,
         </Box>
       )}
       {iconVisibility.nextIcon && (
-        <Box className={`${nextIconStyle.icon}`}>
+        <Box className={`${nextIconStyle.icon}`} onClick={handleNext}>
           {nextIcon}
         </Box>
       )}
       {iconVisibility.skipIcon && (
-        <Box className={`${skipIconStyle.icon}`}>
+        <Box className={`${skipIconStyle.icon}`} onClick={handleSkip}>
           {skipIcon}
         </Box>
       )}

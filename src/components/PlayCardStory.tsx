@@ -88,6 +88,8 @@ const PlayCardStory = () => {
             nextIcon={<NextIcon size={100} backgroundColor="white" />}
             isPlaying={isPlaying}
             onClick={changePlayOrPause}
+            handleNext={() => { console.log('next') }}
+            handleSkip={() => { console.log('skip') }}
             title="Add to favorite"
             iconPosition="right"
             progressBar
