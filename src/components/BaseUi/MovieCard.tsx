@@ -31,7 +31,6 @@ interface MovieCardProps {
   progressBar?: boolean
   onClick?: () => void;
   togglePlayIcon?: () => React.ReactNode;
-
 }
 
 const widthSizeValues: Record<ConfigSize, string> = {
