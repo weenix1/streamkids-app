@@ -2,15 +2,11 @@
   /* Poetic base style configuration */
   "extends": "./node_modules/poetic/config/typescript/tsconfig.json",
   /* Add your custom configuration after this */
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "src/components/BaseUi/IllustratedLayoutPanel.tsx"],
   "compilerOptions": {
     "target": "es5",
     "outDir": "dist",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "skipLibCheck": true,
     "esModuleInterop": true,
     "module": "esnext",
@@ -19,7 +15,7 @@
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "allowJs": true,
-    "jsx": "react",
+    "jsx": "react-jsx",
     "noEmit": true
   }
 }

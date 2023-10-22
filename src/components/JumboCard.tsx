@@ -1,40 +1,43 @@
-import React from "react"
-import Header from "./Header"
-import headerPic from '../assets/images/header-bg.png'
-import I18nS from "../Services/I18nService";
-import Title from "./Title";
-import Text from "./Text";
-import CustomButton from "./CustomButton";
+import Header from './Header';
+import I18nS from '../Services/I18nService';
+import Title from './BaseUi/Title';
+import Text from './BaseUi/Text';
+import CustomButton from './BaseUi/CustomButton';
+import headerPic from '../assets/images/header-bg.png';
+import RoutingS from '../Services/RoutingS';
+import Box from './BaseUi/Box';
 
-
-const JumboCard = () => {
-
+function JumboCard() {
   const { t } = I18nS;
+  const navToGetStarted = RoutingS.useNavToGetStarted();
 
   return (
-    <div className=" bg-cover bg-center " style={{
-      backgroundImage:
-        `url(${headerPic})`,
-      height: '49.5625rem'
-    }}>
+    <div
+      className="bg-cover bg-center "
+      style={{
+        backgroundImage: `url(${headerPic})`,
+        height: '49.5625rem',
+      }}
+    >
       <Header />
-      <div className="flex flex-col justify-items-center items-center pt-36  ">
-        <div className="h-44 w-2/6 flex items-center justify-items-center flex-col">
-          <Title variant="h1" color="white">{t('landing_title')}</Title>
-          <Text className="font-normal basic">{t('landing_subtitle')}  </Text>
+      <Box flexDirection='column' flexJustifyContent='center' flexAlignItems='center' className="pt-36">
+        <Box flexAlignItems='center' flexJustifyContent='center' flexDirection='column' className="h-44 w-2/6">
+          <Title
+            variant="h1"
+            color='white'
+          >
+            {t('landing_title')}
+          </Title>
+          <Text color='white' bold>{t('landing_subtitle')} </Text>
           <div className="pt-4 md:pt-14">
-            <CustomButton
-              onClick={() => console.log("Button clicked")}
-              dataTestId="custom-button-test"
-            >
+            <CustomButton bgColor='blue' color='white' height='sm' width='lg' onClick={navToGetStarted} dataTestId="custom-button-test">
               {t('landing_button')}
             </CustomButton>
           </div>
-        </div>
-      </div>
-
+        </Box>
+      </Box>
     </div>
-  )
+  );
 }
 
-export default JumboCard
+export default JumboCard;
